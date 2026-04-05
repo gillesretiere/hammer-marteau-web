@@ -52,4 +52,4 @@ export const ThemeProvider = ({ children }) => {
 };
 
 // Hook personnalisé pour l'utiliser facilement
-export const useTheme = () => useContext(ThemeContext);
+export const useThemeCtx = () => useContext(ThemeContext);

@@ -32,6 +32,7 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
+// Hook personnalisé pour l'utiliser facilement
 // 3. Hook personnalisé pour utiliser le thème facilement
 export const useTheme = () => {
   const context = useContext(ThemeContext);

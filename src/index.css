@@ -10,41 +10,46 @@
 
 
 :root {
-    /* Couleurs de base (Format R G B) */
-    /* Identité visuelle */
-    --color-primary: 244 67 54;
-    /* #f44336 */
-    --color-secondary: 0 210 233;
-    /*0 210 233;*/
-    /* #00D2E9 */
-    --color-orange: 242 69 53;
-    --color-orange-bright: 242 139 48;
-    /* #FF2D55 */
-    --color-blue: 0 0 255;
-    --color-special-green: 217 255 0;
+  --color-primary: 170 59 255;
+  --color-orange: 0 154 0;
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-    /* Lisibilité du contenu (Mode Clair) */
-    --color-text-body: 31 41 55;
-    /* Gris très foncé (Tailwind gray-800) */
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
 
-    /* Surfaces et Texte */
-    --color-bg-main: 252 250 247;
-    /* Fond d'écran très clair */
-    --color-bg-card: 255 255 255;
-    /* Mode Clair */
-    --color-bg-pills: 243 244 246;
-    /* Gris clair pour les pills (gray-100) */
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    --color-text-main: 31 32 35;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.05);
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
 
-    /* Rayons de bordure très arrondis pour le style "Kids Place" */
-    --radius-lg: 24px;
-    /* #619257 */
+.dark {
+    --color-primary: #1E293B;  
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-primary: #1E293B;
     --text: #9ca3af;
     --text-h: #f3f4f6;
     --bg: #16171d;
@@ -68,7 +73,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+  /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
   text-align: center;

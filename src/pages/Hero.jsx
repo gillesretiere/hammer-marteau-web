@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Globe, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <section className="relative pt-40 pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -19,7 +22,8 @@ const Hero = () => {
             </span>
             Micro-Agence Web & IA
           </motion.div>
-          
+          <h1 className="text-5xl md:text-7xl font-bold text-primary-main leading-[1.1] mb-8">{t('hero_title')}</h1>
+
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-[1.1] mb-8">
             Concevoir pour <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-slate-900">
@@ -34,7 +38,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-slate-900 text-white px-8 py-4 rounded-md font-medium hover:bg-red-600 transition-all transform hover:-translate-y-1 shadow-lg shadow-slate-200">
+            <button className="bg-primary-main text-white px-8 py-4 rounded-md font-medium hover:bg-primary-orange transition-all transform hover:-translate-y-1 shadow-lg shadow-slate-200">
               Découvrir nos services
             </button>
             <button className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-md font-medium hover:bg-slate-50 transition-all">
