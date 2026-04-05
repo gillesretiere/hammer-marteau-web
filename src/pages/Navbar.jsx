@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Globe, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { logo_true_red, } from "../assets/img/index.js";
 
-const Navbar = () => {
+const Navbar = ({context}) => {
   const [lang, setLang] = useState('FR');
   const [isLangOpen, setIsLangOpen] = useState(false);
 
@@ -13,18 +14,21 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <nav className="fixed w-full md:w-[90%] z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo HM */}
         <div className="flex items-center gap-2 group cursor-pointer">
-          <div className="w-10 h-10 bg-red-600 flex items-center justify-center rounded-sm transition-transform group-hover:rotate-90">
+          {/*
+          <div className="w-10 h-10 bg-red-600 flex items-center justify-center rounded-sm transition-transform group-hover:-rotate-90">
              <span className="text-white font-bold text-xl">H</span>
-          </div>
+          </div>          
+          */}
+          <img src={logo_true_red} className="w-10 h-10 rounded-sm transition-transform group-hover:-rotate-90"/>
           <span className="font-semibold text-slate-900 tracking-tight text-lg">Hammer & Marteau</span>
         </div>
 
         {/* Menu & Language Selector */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="flex items-center gap-8">
           <a href="#services" className="text-sm font-medium text-slate-600 hover:text-red-600 transition-colors">Services</a>
           <a href="#expertise" className="text-sm font-medium text-slate-600 hover:text-red-600 transition-colors">Expertise</a>
           

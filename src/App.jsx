@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './hooks/useTheme'; 
+
 import LandingPage from './pages/LandingPage';
 
 // Nous importons i18n ici pour qu'il soit chargé dès le début
