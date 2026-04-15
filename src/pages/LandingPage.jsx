@@ -1,7 +1,10 @@
 import React from 'react';
 import { useTheme } from '../hooks/useTheme'; // Import nommé avec { }
 import Navbar from "./Navbar";
+import Navbar2 from "./Navbar2";
 import Hero from './Hero';
+import { HeroSwissTech, HeroLiquid, HeroMedical, } from "../sections/index.js";
+
 
 
 const LandingPage = () => {
@@ -9,8 +12,8 @@ const LandingPage = () => {
   const { isDark } = useTheme();
   return (
     <>
-      <Navbar />
-      <Hero />
+      <Navbar2 />
+      <HeroMedical />
     </>
   )
 }

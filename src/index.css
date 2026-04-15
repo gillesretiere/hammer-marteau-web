@@ -10,12 +10,16 @@
 
 
 :root {
-  --color-primary: 170 59 255;
-  --color-orange: 0 154 0;
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
+  /* --- THÈME 1 : SLATE ENGINEERING --- */
+  --bg: #ffffff;
+  --surface: #f5f3ff;
+  --primary: #4f46e5;
+  /* Indigo 600 */
+  --primary-hover: #4338ca;
+  --text-h: #1e1b4b;
+  --text-b: #312e81;
+  --text-m: #4338ca;
+  --border: #ddd6fe;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
@@ -44,16 +48,30 @@
 }
 
 .dark {
-    --color-primary: #1E293B;  
+  /* --- THÈME 1 : SLATE ENGINEERING --- */
+  --bg: #ffffff;
+  --surface: #1e1b4b;
+  --primary: 165 180 252;
+  /* Indigo 300 */
+  --primary-hover: 199 210 254;
+  --text-h: #faf5ff;
+  --text-b: #c7d2fe;
+  --text-m: #a5b4fc;
+  --border: #312e81;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #1E293B;
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
+    /* --- THÈME 1 : SLATE ENGINEERING --- */
+    --bg: #ffffff;
+    --surface: #1e1b4b;
+    --primary: 165 180 252;
+    /* Indigo 300 */
+    --primary-hover: 199 210 254;
+    --text-h: #faf5ff;
+    --text-b: #c7d2fe;
+    --text-m: #a5b4fc;
+    --border: #312e81;
     --code-bg: #1f2028;
     --accent: #c084fc;
     --accent-bg: rgba(192, 132, 252, 0.15);
@@ -69,7 +87,9 @@
 }
 
 body {
-  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-h);
+  transition: background 0.3s ease;
 }
 
 #root {
@@ -95,20 +115,24 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }

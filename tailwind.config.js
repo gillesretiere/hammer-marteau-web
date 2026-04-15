@@ -8,24 +8,24 @@ module.exports = {
         'custom-card': 'var(--card-shadow)',
       },
       colors: {
-        // Redirection vers les variables CSS de index.css
-        'primary-main': 'rgb(var(--color-primary) / <alpha-value>)',
-        'primary-orange': 'rgb(var(--color-orange) / <alpha-value>)',
-        'primary-blue': 'rgb(var(--color-blue) / <alpha-value>)',
-        'secondary-main': 'rgb(var(--color-secondary) / <alpha-value>)',
-        'special-green': 'rgb(var(--color-special-green) / <alpha-value>)',
-        'body-text': 'rgb(var(--color-text-body) / <alpha-value>)',
-        'main-bg': 'rgb(var(--color-bg-main) / <alpha-value>)',
-        'card-bg': 'rgb(var(--color-bg-card) / <alpha-value>)',
-        'pills-bg': 'rgb(var(--color-bg-pills) / <alpha-value>)',
-        'hammer-red': '#E2725B', // Votre Terra Cotta / Rouge logo
-        'hammer-dark': '#1E293B', // Votre Bleu nuit institutionnel
-
+        // Ces noms ne changent jamais, seule la valeur CSS change
+        brand: {
+          bg: 'var(--bg)',
+          surface: 'var(--surface)',
+          primary: 'var(--primary)',
+          hover: 'var(--primary-hover)',
+          heading: 'var(--text-h)',
+          body: 'var(--text-b)',
+          muted: 'var(--text-m)', // Pour les captions
+          border: 'var(--border)',
+        }
       },
       fontFamily: {
         primary: ["articulat-cf, sans-serif"],
         secondary: ["artifex-cf, serif"],
       },
+      animation: { 'marquee': 'marquee 30s linear infinite' },
+      keyframes: { marquee: { '0%': { transform: 'translateX(0%)' }, '100%': { transform: 'translateX(-100%)' } } },
     },
   },
   plugins: [],
