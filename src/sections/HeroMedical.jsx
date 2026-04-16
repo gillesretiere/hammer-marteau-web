@@ -22,19 +22,19 @@ const Hero = () => {
                     <span className="text-brand-heading not-italic">
                         {t('hero_title_1')}<br />
                     </span>
-                    <span className="text-brand-primary not-italic">
+                    <span className="text-brand-heading not-italic">
                         {t('hero_title_2')}<br />
                     </span>
+                    <span className="text-brand-primary not-italic">
+                        {t('hero_title_3')}<br />
+                    </span>
                 </h1>
-                <h2 className="text-3xl md:text-5xl font-thin text-brand-heading leading-[0.4] mb-8 normal-case tracking-wide">
-                    {t('hero_title_3')}
-                </h2>
-                        <div className="flex gap-3 items-center justify-center font-mono text-[10px] uppercase tracking-widest text-brand-heading">
-                            <span>{t('skill_1')}</span> <span><Check size={16} /></span>
-                            <span>{t('skill_2')}</span> <span><Check size={16} /></span>
-                            <span>{t('skill_3')}</span> <span><Check size={16} /></span>
-                            <span>{t('skill_4')}</span> <span><Check size={16} /></span>
-                        </div>
+                <div className="flex gap-3 items-center justify-center font-mono text-[10px] uppercase tracking-widest text-brand-heading">
+                    <span>{t('skill_1')}</span> <span><Check size={16} /></span>
+                    <span>{t('skill_2')}</span> <span><Check size={16} /></span>
+                    <span>{t('skill_3')}</span> <span><Check size={16} /></span>
+                    <span>{t('skill_4')}</span> <span><Check size={16} /></span>
+                </div>
                 {/*
         <h1 className="text-5xl md:text-7xl font-bold text-primary-main leading-[1.1] mb-8">{t('hero_title')}</h1>
         */}
