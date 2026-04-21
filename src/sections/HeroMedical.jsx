@@ -18,16 +18,16 @@ const Hero = () => {
                     </span>
                 </motion.div>
 
-                <h1 className="text-6xl md:text-8xl font-black text-brand-body tracking-tighter uppercase leading-[0.9] mb-10">
+                <h1 className="text-6xl md:text-8xl font-black text-brand-body tracking-tighter uppercase leading-[0.9] my-12">
                     <span className="text-brand-heading not-italic">
                         {t('hero_title_1')}<br />
                     </span>
                     <span className="text-brand-heading not-italic">
                         {t('hero_title_2')}<br />
                     </span>
-                    <span className="text-brand-primary not-italic">
+                    <div className="text-2xl md:text-3xl text-brand-primary font-medium uppercase leading-tight tracking-normal not-italic my-20">
                         {t('hero_title_3')}<br />
-                    </span>
+                    </div>
                 </h1>
                 <div className="flex gap-3 items-center justify-center font-mono text-[10px] uppercase tracking-widest text-brand-heading">
                     <span>{t('skill_1')}</span> <span><Check size={16} /></span>
