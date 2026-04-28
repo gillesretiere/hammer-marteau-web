@@ -2,8 +2,7 @@ import React from 'react';
 import { useTheme } from '../hooks/useTheme'; // Import nommé avec { }
 import Navbar from "./Navbar";
 import Navbar2 from "./Navbar2";
-import Hero from './Hero';
-import { HeroSwissTech, HeroLiquid, HeroMedical, } from "../sections/index.js";
+import { Hero, DownloadSection, } from "../sections/index.js";
 
 
 
@@ -13,7 +12,8 @@ const LandingPage = () => {
   return (
     <>
       <Navbar2 />
-      <HeroMedical />
+      <Hero />
+      <DownloadSection />
     </>
   )
 }

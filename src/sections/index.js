@@ -1,7 +1,7 @@
-import HeroSwissTech from "./HeroSwissTech";
-import HeroLiquid from './HeroLiquid';
-import HeroMedical from './HeroMedical';
+
+import Hero from './Hero';
+import DownloadSection from './DownloadSection';
 
 export {
-    HeroSwissTech, HeroLiquid, HeroMedical,
+    Hero, DownloadSection,
 };
