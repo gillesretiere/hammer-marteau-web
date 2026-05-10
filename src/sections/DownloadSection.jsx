@@ -1,20 +1,65 @@
 import React from 'react';
 import { Download, FileText, Video, Globe, ExternalLink, Play, } from 'lucide-react';
 import { s01a5es, s01a5pt } from "../../public/docs/index.js";
-import { s01a5fr_tn, s01a5ru_tn, s01a5ro_tn, s01a5en_tn, s01a5es_tn, s01a5pt_tn, s01a5ar_tn, s02a5pt_tn, generic_video_tn, } from "../../public/thumbnails/index.js";
+import { s01a5fr_tn, s01a5ru_tn, s01a5ro_tn, s01a5en_tn, s01a5es_tn, s01a5pt_tn, s01a5ar_tn, s02a5pt_tn, generic_video_tn, saynetes_fr, video_saynetes_2026_O5, } from "../../public/thumbnails/index.js";
 import { saynetes_diabete_anim_barriere_langue_01, } from "../../public/videos/index.js";
+import BookViewer from '../components/BookViewer.jsx';
 
 const DownloadSection = () => {
     const resources = [
+                {
+            id: 31,
+            title: "Clip Les Saynètes (34 secondes)",
+            subtitle: "Clip pour illustrer des publications sur les réseaux sociaux.",
+            description: "Créé avec Adobe Premiere Pro.",
+            thumbnail: generic_video_tn, // Thumbnail
+            type: "MP4",
+            view: false,
+            size: "9.5 Mo",
+            date: "10 mai 2026",
+            url: "https://drive.google.com/file/d/18uoIVV5VdW78t3Loas3oMG0ZwqHHFCJK/view?usp=share_link",
+            isExternal: false,
+            languages: ["FR"]
+        },
+        {
+            id: 32,
+            title: "Les Saynètes - le diabète (Website)",
+            subtitle: "Application thérapeutique multilingue.",
+            description: "ReactJS - Tailwind CSS",
+            thumbnail: saynetes_fr, // Thumbnail
+            type: "MP4",
+            view: false,
+            size: "",
+            date: "10 mai 2026",
+            url: "https://saynetes.fr/",
+            isExternal: true,
+            languages: ["Multi"]
+        },
+        {
+            id: 33,
+            title: "Vidéo Les Saynètes (1:34)",
+            subtitle: "Vidéo de présentation de l'application Les Saynètes - le diabète",
+            description: "Créé avec Adobe Express et Adobe Premiere Pro.",
+            thumbnail: video_saynetes_2026_O5, // Thumbnail
+            type: "MP4",
+            view: false,
+            size: "45 Mo",
+            date: "10 mai 2026",
+            url: "https://drive.google.com/file/d/1gg13c1P0z3mCEkjwv9em2LSuOpyJY77M/view?usp=share_link",
+            isExternal: false,
+            languages: ["FR"]
+        },
         {
             id: 11,
             title: "Diabète - Chez le médecin.",
             subtitle: "Annonce de la maladie chez le Médecin traitant.",
-            description: "Une saynète pour communiquer et informer sur le diabète de type 2.",
+            description: "Une saynète pour communiquer et informer sur le diabète de type 2. Créé avec Adobe InDesign.",
             thumbnail: s01a5fr_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: "https://hammer-marteau.com/drive/",
+            date: "10 mai 2026",
+            url: "https://hammer-marteau.com/assets/livrets/SNDB-01-FR.pdf",
             isExternal: false,
             languages: ["FR"]
         },
@@ -25,8 +70,10 @@ const DownloadSection = () => {
             description: "Сценка сообщающая и информирующаяо диабете 2ого типа.",
             thumbnail: s01a5ru_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: "https://hammer-marteau.com/drive/",
+            date: "10 mai 2026",
+            url: "https://hammer-marteau.com/assets/livrets/SNDB-01-RU.pdf",
             isExternal: false,
             languages: ["RU"]
         },
@@ -37,8 +84,10 @@ const DownloadSection = () => {
             description: "O scenetă despre tehnicile de comunicare și informare asupra diabetului de tip 2.",
             thumbnail: s01a5ro_tn, // Thumbnail
             type: "PDF",
+            view: false,
+            date: "10 mai 2026",
             size: "1.2 Mo",
-            url: "https://hammer-marteau.com/drive/",
+            url: "https://hammer-marteau.com/assets/livrets/SNDB-01-RO.pdf",
             isExternal: false,
             languages: ["RO"]
         },
@@ -49,8 +98,10 @@ const DownloadSection = () => {
             description: "A sketch to communicate and inform about type 2 diabetes.",
             thumbnail: s01a5en_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: "https://hammer-marteau.com/drive/",
+            date: "10 mai 2026",
+            url: "https://hammer-marteau.com/assets/livrets/SNDB-01-EN.pdf",
             isExternal: false,
             languages: ["EN"]
         },
@@ -61,8 +112,10 @@ const DownloadSection = () => {
             description: "Un sketch (sainete) para comunicar e informar sobre la diabetes tipo 2",
             thumbnail: s01a5es_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: s01a5es,
+            date: "10 mai 2026",
+            url: "/https://hammer-marteau.com/assets/livrets/SNDB-01-ES.pdf",
             isExternal: false,
             languages: ["ES"]
         },
@@ -73,8 +126,10 @@ const DownloadSection = () => {
             description: "Uma esquete (sketch) para comunicar e informar sobre a diabetes tipoo 2.",
             thumbnail: s01a5pt_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: s01a5pt,
+            date: "10 mai 2026",
+            url: "/https://hammer-marteau.com/assets/livrets/SNDB-01-PT.pdf",
             isExternal: false,
             languages: ["PT"]
         },
@@ -85,8 +140,10 @@ const DownloadSection = () => {
             description: "مشهد قصير للتواصل والتوعية حول مرض السكري من النوع الثاني",
             thumbnail: s01a5ar_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: s01a5pt,
+            date: "10 mai 2026",
+            url: "https://hammer-marteau.com/assets/livrets/SNDB-01-AR.pdf",
             isExternal: false,
             languages: ["AR"]
         },
@@ -97,50 +154,16 @@ const DownloadSection = () => {
             description: "Uma esquete (sketch) para comunicar e informar sobre a diabetes tipoo 2.",
             thumbnail: s02a5pt_tn, // Thumbnail
             type: "PDF",
+            view: false,
             size: "1.2 Mo",
-            url: s01a5pt,
+            date: "10 mai 2026",
+            url: "https://hammer-marteau.com/assets/livrets/SNDB-02-PT.pdf",
             isExternal: false,
             languages: ["PT"]
         },
-        {
-            id: 31,
-            title: "Tutoriel Les Saynètes (B.mp4)",
-            subtitle: "Diabetes: El anuncio de la enfermedad por el médico de familia.",
-            description: "Vidéo explicative sur la mise en place d'ateliers multilingues.",
-            thumbnail: generic_video_tn, // Thumbnail
-            type: "MP4",
-            size: "45 Mo",
-            url: "https://drive.google.com/drive/folders/1vOFkMm7d3DeThTrgVCl8uaSj0ewIS8Qw?usp=share_link",
-            isExternal: false,
-            languages: ["FR"]
-        },
-        {
-            id: 32,
-            title: "Ressources Partenaires (Cloud)",
-            subtitle: "Diabetes: El anuncio de la enfermedad por el médico de familia.",
-            description: "Accès au dossier partagé Google Drive mis à jour par l'ASAMLA.",
-            thumbnail: "/assets/thumbnails/s1ar102.webp", // Thumbnail
-            type: "Drive",
-            size: "Variable",
-            url: "https://hammer-marteau.com/drive/1NG_DwQH0FMc2qTLMXRMoyPIf1fTVeQad/view?usp=share_link",
-            isExternal: true,
-            languages: ["Multi"]
-        },
-        {
-            id: 33,
-            title: "Ressources Partenaires (Cloud)",
-            subtitle: "Diabetes: El anuncio de la enfermedad por el médico de familia.",
-            description: "Accès au dossier partagé Google Drive mis à jour par l'ASAMLA.",
-            thumbnail: "/assets/thumbnails/s1ar102.webp", // Thumbnail
-            type: "Drive",
-            size: "Variable",
-            url: "https://drive.google.com/file/d/1NG_DwQH0FMc2qTLMXRMoyPIf1fTVeQad/view?usp=sharing",
-            isExternal: true,
-            languages: ["Multi"]
-        }
     ];
     return (
-        <section className="py-16 bg-brand-bg">
+        <section id="resources" className="py-16 bg-brand-bg">
             <div className="max-w-6xl mx-auto px-6"> {/* max-w-6xl pour resserrer la section */}
                 <div className="mb-16 border-l-4 border-brand-primary pl-6">
                     <h2 className="text-3xl font-bold text-brand-heading mb-4 italic font-secondary">
@@ -180,7 +203,7 @@ const DownloadSection = () => {
 
                             {/* CONTENU TEXTE : Plus compact */}
                             <div className="p-5 flex flex-col flex-grow" dir="auto">
-                                <div className="flex justify-between items-start mb-2">
+                                <div className="flex justify-center items-start mb-2">
                                     <h3 className="text-base font-bold text-brand-heading leading-tight group-hover:text-brand-primary transition-colors">
                                         {res.title}
                                     </h3>
@@ -193,6 +216,9 @@ const DownloadSection = () => {
 
                                 <p className="text-xs text-brand-body mb-4 px-12 line-clamp-2 leading-relaxed">
                                     {res.description}
+                                </p>
+                                <p className="text-xs text-brand-muted mb-4 px-12 line-clamp-2 leading-relaxed">
+                                    Publié le {res.date}
                                 </p>
 
                                 <div className="flex items-center gap-2 mb-5 mt-auto opacity-70">
@@ -212,6 +238,7 @@ const DownloadSection = () => {
                                 >
                                     {res.isExternal ? <ExternalLink size={14} /> : <Download size={14} />}
                                     {res.isExternal ? 'Consulter' : 'Télécharger'}
+                                    {res.view ? <BookViewer pdfUrl={res.url} /> : <></>}
                                 </a>
                             </div>
                         </div>

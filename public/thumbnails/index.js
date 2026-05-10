@@ -7,7 +7,8 @@ import s01a5pt_tn from './s01a5pt.webp';
 import s01a5ar_tn from './s01a5ar.webp';
 import s02a5pt_tn from './s02a5pt.webp';
 import generic_video_tn from './generic_video.webp';
-
+import saynetes_fr from './Barrière de la langue-Firefly-20260319.png';
+import video_saynetes_2026_O5 from './Séquence 01.00_00_00_00.Still001.jpg';
 export {
     s01a5fr_tn,
     s01a5ru_tn,
@@ -18,4 +19,6 @@ export {
     s01a5ar_tn, 
     s02a5pt_tn,
     generic_video_tn,
+    saynetes_fr,
+    video_saynetes_2026_O5,
 };

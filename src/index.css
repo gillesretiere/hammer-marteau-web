@@ -23,18 +23,17 @@
 }
 
 :root {
-  /* --- THÈME 1 : SLATE ENGINEERING --- */
-  --bg: #ffffff;
-  --surface: #f5f3ff;
-  --primary: #4f46e5;
-  /* Indigo 600 */
-  --primary-hover: #4338ca;
-  --text-h: #1e1b4b;
-  --text-b: #312e81;
-  --text-m: #4338ca;
-  --border: #ddd6fe;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --bg: #F0F4F8;
+  --surface: #FFFFFF;
+  --primary: #4F46E5;
+  /* Indigo vibrant */
+  --primary-hover: #4338CA;
+  --text-h: #1A202C;
+  --text-b: #2D3748;
+  --text-m: #718096;
+  --border: #CBD5E0;
+  --accent: #10B981;
+  /* Vert émeraude (Inclusion et vitalité) */
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
@@ -61,37 +60,49 @@
 }
 
 .dark {
-  /* --- THÈME 1 : SLATE ENGINEERING --- */
-  --bg: #1e1b4b;
-  --surface: #1e1b4b;
-  --primary: 165 180 252;
-  /* Indigo 300 */
-  --primary-hover: 199 210 254;
-  --text-h: #faf5ff;
-  --text-b: #c7d2fe;
-  --text-m: #a5b4fc;
-  --border: #312e81;
+  /* --- MODE SOMBRE : NUMÉRIQUE INCLUSIF --- */
+  --bg: #0F172A;
+  /* Fond ardoise profond */
+  --surface: #1E293B;
+  /* Surfaces plus légères */
+  --primary: #818CF8;
+  /* Indigo clair vibrant */
+  --primary-hover: #A5B4FC;
+  --text-h: #F8FAFC;
+  /* Blanc éclatant */
+  --text-b: #E2E8F0;
+  /* Gris clair pour le corps */
+  --text-m: #94A3B8;
+  /* Gris bleu pour les éléments discrets */
+  --border: #334155;
+  /* Bordures foncées */
+  --accent: #34D399;
+  /* Menthe pour le contraste */
+  --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --- THÈME 1 : SLATE ENGINEERING --- */
-    --bg: #1e1b4b;
-    --surface: #1e1b4b;
-    --primary: 165 180 252;
-    /* Indigo 300 */
-    --primary-hover: 199 210 254;
-    --text-h: #faf5ff;
-    --text-b: #c7d2fe;
-    --text-m: #a5b4fc;
-    --border: #312e81;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    /* --- MODE SOMBRE : NUMÉRIQUE INCLUSIF --- */
+    --bg: #0F172A;
+    /* Fond ardoise profond */
+    --surface: #1E293B;
+    /* Surfaces plus légères */
+    --primary: #818CF8;
+    /* Indigo clair vibrant */
+    --primary-hover: #A5B4FC;
+    --text-h: #F8FAFC;
+    /* Blanc éclatant */
+    --text-b: #E2E8F0;
+    /* Gris clair pour le corps */
+    --text-m: #94A3B8;
+    /* Gris bleu pour les éléments discrets */
+    --border: #334155;
+    /* Bordures foncées */
+    --accent: #34D399;
+    /* Menthe pour le contraste */
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
   }
 
   #social .button-icon {

@@ -32,7 +32,7 @@ i18n
           skill_1: "Site Web",
           skill_2: "Branding",
           skill_3: "Conseil",
-          skill_4: "Communication",
+          skill_4: "Communication Multilingue",
           // Ajoutez vos clés ici
         }
       },
@@ -54,7 +54,7 @@ i18n
           hero_title_2: "Digital Expression",
           hero_title_3: "Partner",
           skill_1: "Supervised AI",
-          skill_2: "Communication",
+          skill_2: "Multilingual Communication",
           skill_3: "Social Networks",
           skill_4: "Websites / Mobile Apps",
           skill_5: "Consultancy",

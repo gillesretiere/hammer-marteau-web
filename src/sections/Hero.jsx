@@ -1,61 +1,69 @@
- import React from 'react';
- import { motion } from 'framer-motion';
- import { useTranslation } from 'react-i18next';
- import { ArrowUpRight, Check } from 'lucide-react';
- import TypeWriterEffect from "../components/TypeWriterEffect";
- 
- 
- const Hero = () => {
-     const { t } = useTranslation();
-     return (
-         <section className="pt-40 pb-20 overflow-hidden bg-brand-bg transition-colors">
-             {/* Background Grid Pattern (Subtil) */}
-             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                 <motion.div initial={{ opacity: 0.2, x: -800 }} animate={{ opacity: 0.8, x: 0 }} className="flex items-center gap-3 mb-8">
-                     <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-brand-body font-bold">
-                         {t('corp_submark_1')}&nbsp;●&nbsp;{t('corp_submark_2')}&nbsp;●&nbsp;{t('corp_submark_3')}
-                     </span>
-                 </motion.div>
- 
-                 <h1 className="text-6xl md:text-8xl font-black text-brand-body tracking-tighter uppercase leading-[0.9] my-12">
-                     <span className="text-brand-heading not-italic">
-                         {t('hero_title_1')}<br />
-                     </span>
-                     <span className="text-brand-heading not-italic">
-                         {t('hero_title_2')}<br />
-                     </span>
-                     <div className="text-2xl md:text-3xl text-brand-primary font-medium uppercase leading-tight tracking-normal not-italic my-20">
-                         {t('hero_title_3')}<br />
-                     </div>
-                 </h1>
-                 <div className="flex gap-3 items-center justify-center font-mono text-[10px] uppercase tracking-widest text-brand-heading">
-                     <span>{t('skill_1')}</span> <span><Check size={16} /></span>
-                     <span>{t('skill_2')}</span> <span><Check size={16} /></span>
-                     <span>{t('skill_3')}</span> <span><Check size={16} /></span>
-                     <span>{t('skill_4')}</span> <span><Check size={16} /></span>
-                 </div>
-                 {/*
-         <h1 className="text-5xl md:text-7xl font-bold text-primary-main leading-[1.1] mb-8">{t('hero_title')}</h1>
-         */}
- 
-             </div>
- 
-             {/* Marquee Footer (Preuve Technique) */}
-             <div className="mt-32 border-y border-slate-100 dark:border-slate-800 py-6 overflow-hidden bg-slate-50/50 dark:bg-slate-900/30">
-                 <div className="flex whitespace-nowrap animate-marquee gap-12">
-                     {[1, 2, 3, 4].map((i) => (
-                         <div key={i} className="flex gap-12 items-center font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-600">
-                             <span>{t('skill_1')}</span> <span>●</span>
-                             <span>{t('skill_2')}</span> <span>●</span>
-                             <span>Tailwind CSS</span> <span>●</span>
-                             <span>Story Telling</span> <span>●</span>
-                             <span>Artificial Intelligence</span> <span>●</span>
-                         </div>
-                     ))}
-                 </div>
-             </div>
-         </section>
-     );
- };
- export default Hero;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { Check } from 'lucide-react';
+import TypeWriterEffect from "../components/TypeWriterEffect";
+
+const Hero = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <section className="min-h-screen flex flex-col pt-20 overflow-hidden bg-brand-bg transition-colors relative">
+            {/* Background Grid Pattern - Opacité réduite pour moins faire "Bureau d'étude" */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-10" />
+            
+            {/* Conteneur Central : On utilise flex-grow pour pousser le marquee vers le bas */}
+            <div className="max-w-7xl mx-auto px-6 relative z-10 flex-grow flex flex-col justify-center items-center text-center">
+                
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    transition={{ duration: 0.8 }}
+                    className="mb-6"
+                >
+                    {/* Correction lisibilité : passage en text-brand-body au lieu de muted */}
+                    <span className="text-[10px] md:text-xs font-mono uppercase tracking-[0.5em] text-brand-body font-bold opacity-80">
+                        {t('corp_submark_1')} ● {t('corp_submark_2')} ● {t('corp_submark_3')}
+                    </span>
+                </motion.div>
+
+                {/* Titre Principal : Harmonisé avec la Navbar (Font Primary / Bold) */}
+                <div className="mb-12">
+                    <h1 className="text-6xl md:text-9xl font-black text-brand-heading leading-none font-primary uppercase tracking-tighter">
+                        Hammer<br />& Marteau
+                    </h1>
+                    <div className="text-xl md:text-2xl text-brand-primary mt-8 font-primary font-medium uppercase tracking-[0.2em]">
+                        Expression Numérique
+                    </div>
+                </div>
+
+                {/* Skills : Centrés pour rompre le côté rigide */}
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 text-[10px] md:text-xs font-mono text-brand-body mt-4">
+                    {['skill_1', 'skill_2', 'skill_3', 'skill_4'].map((skill, index) => (
+                        <div key={index} className="flex items-center gap-3 group">
+                            <span className="group-hover:text-brand-primary transition-colors">{t(skill)}</span>
+                            <Check size={14} style={{ color: 'var(--accent)' }} strokeWidth={3} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Marquee Footer : Positionné tout en bas avec mt-auto */}
+            <div className="mt-auto border-y border-brand-border py-8 overflow-hidden bg-brand-surface/30 backdrop-blur-sm">
+                <div className="flex whitespace-nowrap animate-marquee gap-12">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                        <div key={i} className="flex gap-12 items-center font-mono text-[10px] uppercase tracking-[0.3em] text-brand-muted">
+                            <span>{t('skill_1')}</span> <span>●</span>
+                            <span>{t('skill_2')}</span> <span>●</span>
+                            <span>Tailwind CSS</span> <span>●</span>
+                            <span>Story Telling</span> <span>●</span>
+                            <span>Artificial Intelligence</span> <span>●</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
