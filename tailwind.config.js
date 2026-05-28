@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: 'class', // 'class' permet de basculer manuellement
   theme: {
     extend: {
@@ -28,5 +31,7 @@ module.exports = {
       keyframes: { marquee: { '0%': { transform: 'translateX(0%)' }, '100%': { transform: 'translateX(-100%)' } } },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'), // <-- Ajoute cette ligne ici
+  ],
 }

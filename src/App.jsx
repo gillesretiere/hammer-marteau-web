@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './hooks/useTheme';
 import LandingPage from './pages/LandingPage';
+import Blog from './pages/Blog'; // 1. Import de la nouvelle page Blog
 
 // Nous importons i18n ici pour qu'il soit chargé dès le début
 import './i18n/config';
@@ -10,18 +11,12 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        {/* La div ci-dessous réagit dynamiquement au mode sombre via Tailwind */}
-        <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+        {/* La div utilise désormais la transition globale et s'adapte aux thèmes */}
+        <div className="min-h-screen bg-brand-bg text-brand-body transition-colors duration-300">
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            {/* Prêt pour les futures routes /projets ou /contact */}
+            <Route path="/blog" element={<Blog />} /> {/* 2. Ajout de la route */}
           </Routes>
-          {/*
-          <div className="h-screen flex items-center justify-center bg-slate-100">
-            <h1 className="text-2xl font-bold text-red-600">Hammer & Marteau : Test de survie</h1>
-          </div>          
-          */}
-
         </div>
       </Router>
     </ThemeProvider>

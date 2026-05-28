@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../hooks/useTheme';
 import { logo_true_red, hm_logo_transparent_white, hm_logo_transparent_dark, } from "../assets/img/index.js";
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const { i18n } = useTranslation();
@@ -27,7 +27,7 @@ const Navbar = () => {
           ) : (
             <img src={hm_logo_transparent_dark} alt="Logo Hammer & Marteau" className="w-10 h-10 rounded-sm transition-transform group-hover:-rotate-90" />
           )}
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] leading-tight text-sub-text hidden md:block">Hammer & Marteau</span><br/>
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em] leading-tight text-sub-text hidden md:block">Hammer & Marteau</span><br />
         </div>
 
         <div className="flex items-center gap-4">
@@ -51,6 +51,13 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </div>
+          {/* À insérer dans la liste de vos liens de navigation : */}
+          <Link
+            to="/blog"
+            className="text-xs font-mono uppercase tracking-widest text-brand-body hover:text-brand-primary transition-colors"
+          >
+            Blog
+          </Link>
           <button className="hidden sm:flex items-center gap-2 bg-brand-primary text-brand-bg px-5 py-2 rounded-md text-xs font-bold uppercase tracking-wider hover:bg-brand-hover transition-all">
             Contact <ArrowRight size={14} />
           </button>
