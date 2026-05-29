@@ -25,14 +25,14 @@
 :root {
   --bg: #F0F4F8;
   --surface: #FFFFFF;
-  --primary: #4F46E5;
+  --primary: #6366f1; /* Indigo vibrant par exemple */
+  --accent: #34d399;  /* Menthe fraîche */
   /* Indigo vibrant */
   --primary-hover: #4338CA;
   --text-h: #1A202C;
   --text-b: #2D3748;
   --text-m: #718096;
   --border: #CBD5E0;
-  --accent: #10B981;
   /* Vert émeraude (Inclusion et vitalité) */
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);

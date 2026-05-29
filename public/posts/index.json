@@ -1,0 +1,20 @@
+[
+  {
+    "id": "atelier-ecriture-01",
+    "title": "Atelier d'écriture 1/5 — Écriture et structure narrative",
+    "date": "2025-09-01",
+    "excerpt": "Un article décrivant l'expérience d'écriture en utilisant des techniques de structure narrative de professionnels.",
+    "fileName": "Atelier ecriture-cccp_01.md",
+    "tags": ["Écriture", "Structure"],
+    "readingTime": "5 min"
+  },
+  {
+    "id": "mediation-numerique-allophone",
+    "title": "La médiation numérique au service de la santé",
+    "date": "2026-05-28",
+    "excerpt": "Comment concevoir des interfaces capables de briser la barrière de la langue dans le parcours de soin avec l'ASAMLA.",
+    "fileName": "Atelier ecriture-cccp_02.md",
+    "tags": ["UX Inclusive", "Santé"],
+    "readingTime": "4 min"
+  }
+]

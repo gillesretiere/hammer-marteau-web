@@ -38,7 +38,7 @@ const Hero = () => {
                 </div>
 
                 {/* Skills : Centrés pour rompre le côté rigide */}
-                <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 text-[10px] md:text-xs font-mono text-brand-body mt-4">
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 text-[10px] md:text-xs font-mono text-brand-body mb-4">
                     {['skill_1', 'skill_2', 'skill_3', 'skill_4'].map((skill, index) => (
                         <div key={index} className="flex items-center gap-3 group">
                             <span className="group-hover:text-brand-primary transition-colors">{t(skill)}</span>
@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
 
             {/* Marquee Footer : Positionné tout en bas avec mt-auto */}
-            <div className="mt-auto border-y border-brand-border py-8 overflow-hidden bg-brand-surface/30 backdrop-blur-sm">
+            <div className="mt-auto border-y border-brand-border py-4 overflow-hidden bg-brand-surface/30 backdrop-blur-sm">
                 <div className="flex whitespace-nowrap animate-marquee gap-12">
                     {[1, 2, 3, 4, 5].map((i) => (
                         <div key={i} className="flex gap-12 items-center font-mono text-[10px] uppercase tracking-[0.3em] text-brand-muted">

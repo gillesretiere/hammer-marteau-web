@@ -5,53 +5,52 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Navbar2 from './Navbar2'; // 1. Intégration de votre Navbar
 
-// Index de nos fichiers de posts .md stockés dans /public/posts/
-const BLOG_POSTS_INDEX = [
-  {
-    id: "atelier-ecriture-01",
-    title: "Atelier d'écriture 1/5 — Écriture et structure narrative",
-    date: "2025-09-01",
-    excerpt: "Un article décrivant l'expérience d'écriture en utilisant des techniques de structure narrative de professionnels.",
-    fileName: "Atelier ecriture-cccp_01.md", // Nom exact du fichier dans /public/posts/
-    tags: ["Écriture", "Structure"],
-    readingTime: "5 min"
-  },
-  {
-    id: "mediation-numerique-allophone",
-    title: "La médiation numérique au service de la santé",
-    date: "2026-05-28",
-    excerpt: "Comment concevoir des interfaces capables de briser la barrière de la langue dans le parcours de soin avec l'ASAMLA.",
-    fileName: "mediation-numerique-allophone.md",
-    tags: ["UX Inclusive", "Santé"],
-    readingTime: "4 min"
-  }
-];
 
 const Blog = () => {
+  const [postsIndex, setPostsIndex] = useState([]); // Stocke la liste des articles
   const [activePost, setActivePost] = useState(null);
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingList, setLoadingList] = useState(true);
 
-  // 2. Chargement dynamique du fichier MD lors du clic sur "Lire l'article"
+  // 1. Chargement DYNAMIQUE de la liste des articles au chargement du Blog
+  useEffect(() => {
+    fetch('/posts/index.json')
+      .then((res) => {
+        if (!res.ok) throw new Error("Impossible de charger l'index des articles");
+        return res.json();
+      })
+      .then((data) => {
+        // Optionnel : trier par date décroissante automatiquement
+        const sorted = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setPostsIndex(sorted);
+        setLoadingList(false);
+      })
+      .catch((err) => {
+        console.error("Erreur index:", err);
+        setLoadingList(false);
+      });
+  }, []);
+
+  // 2. Chargement dynamique du fichier MD de l'article sélectionné
   useEffect(() => {
     if (!activePost) return;
 
     setLoading(true);
-    // Appel du fichier local situé dans /public/posts/
     fetch(`/posts/${activePost.fileName}`)
       .then((res) => {
-        if (!res.ok) throw new Error("Fichier introuvable");
+        if (!res.ok) throw new Error("Fichier Markdown introuvable");
         return res.text();
       })
       .then((text) => {
-        // Nettoyage optionnel du Front-Matter (les métadonnées de type --- entre tirets)
+        // Nettoyage du Front-Matter si présent
         const cleanText = text.replace(/^---[\s\S]*?---/, "");
         setMarkdownContent(cleanText.trim());
         setLoading(false);
       })
       .catch((err) => {
         console.error(err);
-        setMarkdownContent("Désolé, le contenu de cet article n'a pas pu être chargé.");
+        setMarkdownContent("Désolé, impossible de charger cet article.");
         setLoading(false);
       });
   }, [activePost]);
@@ -66,7 +65,7 @@ const Blog = () => {
 
       <div className="max-w-4xl mx-auto px-6 pt-40 pb-20 relative z-10">
         <AnimatePresence mode="wait">
-          
+
           {/* VUE 1 : Lecture de l'article complet */}
           {activePost ? (
             <motion.div
@@ -101,12 +100,12 @@ const Blog = () => {
                 /* Conteneur de rendu du texte brut ou parsé */
                 <div className="prose dark:prose-invert max-w-none text-left">
                   <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
-                  
+
                 </div>
               )}
             </motion.div>
           ) : (
-            
+
             /* VUE 2 : Liste des articles du Blog */
             <motion.div
               key="list-view"
@@ -119,7 +118,7 @@ const Blog = () => {
                   Chroniques & Réflexions
                 </span>
                 <h1 className="text-5xl md:text-6xl font-black text-brand-heading uppercase tracking-tighter font-primary mb-4">
-                  Paroles d'Artisans
+                  Expressions numériques
                 </h1>
                 <p className="text-sm text-brand-muted max-w-xl font-mono leading-relaxed">
                   Écrits courts et retours d'expérience sur l'expression numérique, le multilinguisme et l'inclusion en santé numérique.
@@ -127,7 +126,7 @@ const Blog = () => {
               </header>
 
               <div className="space-y-16">
-                {BLOG_POSTS_INDEX.map((post, index) => (
+                {postsIndex.map ((post, index) => (
                   <motion.article
                     key={post.id}
                     initial={{ opacity: 0, y: 20 }}

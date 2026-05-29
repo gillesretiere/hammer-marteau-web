@@ -21,15 +21,19 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-[100] bg-main-bg/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          {isDark ? (
-            <img src={hm_logo_transparent_white} alt="Logo Hammer & Marteau" className="w-10 h-10 rounded-sm transition-transform group-hover:-rotate-90" />
-          ) : (
-            <img src={hm_logo_transparent_dark} alt="Logo Hammer & Marteau" className="w-10 h-10 rounded-sm transition-transform group-hover:-rotate-90" />
-          )}
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] leading-tight text-sub-text hidden md:block">Hammer & Marteau</span><br />
-        </div>
-
+        <Link
+          to="/"
+          className="text-xs font-mono uppercase tracking-widest text-brand-body hover:text-brand-primary transition-colors"
+        >
+          <div className="flex items-center gap-4">
+            {isDark ? (
+              <img src={hm_logo_transparent_white} alt="Logo Hammer & Marteau" className="w-10 h-10 rounded-sm transition-transform group-hover:-rotate-90" />
+            ) : (
+              <img src={hm_logo_transparent_dark} alt="Logo Hammer & Marteau" className="w-10 h-10 rounded-sm transition-transform group-hover:-rotate-90" />
+            )}
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] leading-tight text-sub-text hidden md:block">Hammer & Marteau</span><br />
+          </div>
+        </Link>
         <div className="flex items-center gap-4">
           <button onClick={toggleTheme} className="p-2 text-sub-text hover:text-brand-red transition-colors">
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
