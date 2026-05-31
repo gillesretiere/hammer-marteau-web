@@ -1,0 +1,42 @@
+[
+  {
+    "id": "saynetes",
+    "title": "Les Saynètes",
+    "description": "Plateforme multimédia d'expression numérique aidant l'ASAMLA à communiquer avec les populations allophones via des scénarios interactifs.",
+    "tags": ["React", "Multilinguisme", "Médiation"],
+    "slug": "les-saynetes",
+    "featured": true,
+    "gridSpan": "md:col-span-2 md:row-span-2",
+    "imageUrl": "/images/portfolio/saynetes-cover.jpg"
+  },
+  {
+    "id": "trad-sante",
+    "title": "Traduction Santé AI",
+    "description": "Outil d'assistance basé sur l'IA pour la pré-traduction de diagnostics médicaux complexes en 12 langues.",
+    "tags": ["Tailwind CSS", "IA", "Inclusion"],
+    "slug": "traduction-sante-ai",
+    "featured": false,
+    "gridSpan": "md:col-span-1 md:row-span-1",
+    "imageUrl": "/images/diabete-cover.png"
+  },
+  {
+    "id": "ux-allophone",
+    "title": "Portail ARS Grand Est",
+    "description": "Refonte ergonomique et design inclusif pour faciliter l'accès aux droits de santé des populations migrantes.",
+    "tags": ["UX Inclusive", "Accessibilité", "ARS"],
+    "slug": "portail-ars-grand-est",
+    "featured": true,
+    "gridSpan": "md:col-span-1 md:row-span-2",
+    "imageUrl": "/images/portfolio/ars-cover.jpg"
+  },
+  {
+    "id": "laboratoire-langues",
+    "title": "Labo Langues Multi-Format",
+    "description": "Recherche et développement sur la compression audio et l'affichage de glyphes non-latins sur terminaux mobiles à faible bande passante.",
+    "tags": ["R&D", "Performance", "Glyphes"],
+    "slug": "labo-langues-multi-format",
+    "featured": false,
+    "gridSpan": "md:col-span-2 md:row-span-1",
+    "imageUrl": ""
+  }
+]

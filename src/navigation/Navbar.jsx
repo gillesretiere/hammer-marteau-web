@@ -55,13 +55,6 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </div>
-          {/* À insérer dans la liste de vos liens de navigation : */}
-          <Link
-            to="/blog"
-            className="text-xs font-mono uppercase tracking-widest text-brand-body hover:text-brand-primary transition-colors"
-          >
-            Blog
-          </Link>
           <button className="hidden sm:flex items-center gap-2 bg-brand-primary text-brand-bg px-5 py-2 rounded-md text-xs font-bold uppercase tracking-wider hover:bg-brand-hover transition-all">
             Contact <ArrowRight size={14} />
           </button>

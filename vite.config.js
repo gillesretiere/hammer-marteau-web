@@ -16,5 +16,7 @@ export default defineConfig({
   build: {
     outDir: 'build', // Force la sortie dans /build au lieu de /dist
     assetsDir: 'static', // Range les JS/CSS dans /static au lieu de /assets
-  }
+  },
+  // Renseigne la base avec un slash absolu pour fixer les chemins des assets en production
+  base: '/',
 })

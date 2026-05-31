@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTheme } from '../hooks/useTheme'; // Import nommé avec { }
-import Navbar from "./Navbar";
-import Navbar2 from "./Navbar2";
-import { Hero, DownloadSection, } from "../sections/index.js";
+import Navbar from "../navigation/Navbar";
+import { Hero, DownloadSection, PortfolioSection, } from "../sections/index.js";
+import HomePage from './HomePage.jsx';
+import { Home } from 'lucide-react';
 
 
 
@@ -11,9 +12,9 @@ const LandingPage = () => {
   const { isDark } = useTheme();
   return (
     <>
-      <Navbar2 />
-      <Hero />
-      <DownloadSection />
+      <Navbar />
+      <HomePage />
+      <PortfolioSection/>
     </>
   )
 }

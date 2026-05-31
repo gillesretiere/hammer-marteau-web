@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, ArrowRight, BookOpen } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Navbar2 from './Navbar2'; // 1. Intégration de votre Navbar
+import Navbar from '../navigation/Navbar'; // 1. Intégration de votre Navbar
+import { logo_true_red, hm_logo_transparent_white, hm_logo_transparent_dark, } from "../assets/img/index.js";
+import { useTheme } from '../hooks/useTheme';
+
 
 
 const Blog = () => {
@@ -12,6 +15,7 @@ const Blog = () => {
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingList, setLoadingList] = useState(true);
+  const { isDark, toggleTheme } = useTheme();
 
   // 1. Chargement DYNAMIQUE de la liste des articles au chargement du Blog
   useEffect(() => {
@@ -58,7 +62,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-brand-bg text-brand-body transition-colors duration-300 relative">
       {/* Inclusion de la Navbar en haut de page */}
-      <Navbar2 />
+      <Navbar />
 
       {/* Trame de fond graphique */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-10 pointer-events-none" />
@@ -118,7 +122,7 @@ const Blog = () => {
                   Chroniques & Réflexions
                 </span>
                 <h1 className="text-5xl md:text-6xl font-black text-brand-heading uppercase tracking-tighter font-primary mb-4">
-                  Expressions numériques
+                  Blog
                 </h1>
                 <p className="text-sm text-brand-muted max-w-xl font-mono leading-relaxed">
                   Écrits courts et retours d'expérience sur l'expression numérique, le multilinguisme et l'inclusion en santé numérique.
@@ -126,7 +130,7 @@ const Blog = () => {
               </header>
 
               <div className="space-y-16">
-                {postsIndex.map ((post, index) => (
+                {postsIndex.map((post, index) => (
                   <motion.article
                     key={post.id}
                     initial={{ opacity: 0, y: 20 }}
