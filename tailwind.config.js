@@ -21,6 +21,7 @@ module.exports = {
           body: 'var(--text-b)',
           muted: 'var(--text-m)', // Pour les captions
           border: 'var(--border)',
+          accent: 'var(--accent)',
         }
       },
       fontFamily: {

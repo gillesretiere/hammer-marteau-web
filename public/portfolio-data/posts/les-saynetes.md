@@ -6,6 +6,7 @@ client: "ASAMLA (Association Santé Migrants Loire-Atlantique)"
 partenaire: "ARS (Agence Régionale de Santé)"
 role: "Conception UX / Architecture Web / Développement React"
 tags: ["React", "Multilinguisme", "Médiation", "Inclusion"]
+url: "https://saynetes.fr"
 ---
 
 # Les Saynètes — Plateforme multimédia interactive pour l'allophonie

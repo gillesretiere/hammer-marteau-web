@@ -11,7 +11,7 @@ const PortfolioPage = () => {
   const [activeTag, setActiveTag] = useState('ALL');
 
   useEffect(() => {
-    fetch('/portfolio/index.json')
+    fetch('/portfolio-data/index.json')
       .then((res) => res.json())
       .then((data) => {
         setAllProjects(data);
@@ -36,7 +36,7 @@ const PortfolioPage = () => {
   return (
     <main className="min-h-screen bg-brand-bg pt-32 pb-24 transition-colors">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* En-tête Épuré de la Page */}
         <header className="mb-16 border-b border-brand-border pb-12">
           <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-brand-primary block mb-4 font-bold">
@@ -59,11 +59,10 @@ const PortfolioPage = () => {
             <button
               key={tag}
               onClick={() => handleFilter(tag)}
-              className={`px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-all border rounded-sm ${
-                activeTag === tag
+              className={`px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-all border rounded-sm ${activeTag === tag
                   ? 'bg-brand-primary text-brand-bg border-brand-primary font-bold'
                   : 'border-brand-border text-brand-body hover:border-brand-body/60 bg-brand-surface/10'
-              }`}
+                }`}
             >
               {tag === 'ALL' ? t('filter_all', 'Tous les projets') : tag}
             </button>
@@ -71,7 +70,7 @@ const PortfolioPage = () => {
         </div>
 
         {/* Grille Mosaïque Adaptative (Plus de hauteur bloquée à 220px) */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto"
         >
@@ -90,9 +89,9 @@ const PortfolioPage = () => {
                 {/* Visuel optionnel en arrière-plan discret */}
                 {project.imageUrl && (
                   <div className="absolute inset-0 z-0 opacity-5 group-hover:opacity-15 transition-opacity duration-500">
-                    <img 
-                      src={project.imageUrl} 
-                      alt="" 
+                    <img
+                      src={project.imageUrl}
+                      alt=""
                       className="w-full h-full object-cover filter grayscale contrast-125"
                     />
                   </div>
@@ -100,29 +99,29 @@ const PortfolioPage = () => {
 
                 {/* Contenu de la Carte */}
                 <div className="z-10 relative h-full flex flex-col justify-between flex-grow">
-                  
+
                   <div>
-                    {/* Tags Ultra-Discrets inspirés de ton image d'exemple */}
-                    <div className="flex flex-wrap gap-3 mb-6">
+                    {/* Tags Harmonisés (Bordure étroite, police réduite et marges optimisées) */}
+                    <div className="flex flex-wrap gap-1.5 mb-4">
                       {project.tags.map((tag, idx) => (
-                        <span 
-                          key={idx} 
-                          className="text-[9px] font-mono font-light uppercase tracking-[0.2em] text-brand-body opacity-50 group-hover:opacity-80 transition-opacity"
+                        <span
+                          key={idx}
+                          className="text-[7px] md:text-[8px] font-mono uppercase tracking-wider px-2 py-0 border border-brand-border/60 text-brand-body opacity-90 bg-brand-surface/5 rounded-sm"
                         >
-                          // {tag}
+                          {tag}
                         </span>
                       ))}
                     </div>
 
                     {/* Titre */}
-                    <h2 className="text-xl md:text-2xl font-bold font-primary uppercase tracking-tight text-brand-heading group-hover:text-brand-primary transition-colors flex items-start justify-between gap-4">
+                    <h2 className="text-xl md:text-2xl font-bold font-primary uppercase tracking-tight text-left text-brand-heading group-hover:text-brand-primary transition-colors flex items-start justify-between gap-4">
                       <span>{project.title}</span>
                     </h2>
                   </div>
 
-                  {/* Description aérée qui a l'espace pour s'afficher en entier */}
+                  {/* Description aérée alignée à gauche */}
                   <div className="mt-6 flex items-end justify-between gap-4">
-                    <p className="text-xs font-mono roaring-relaxed text-brand-body opacity-70 group-hover:opacity-90 transition-opacity max-w-xl">
+                    <p className="text-xs font-mono leading-relaxed text-left text-brand-body opacity-70 group-hover:opacity-90 transition-opacity max-w-xl">
                       {project.description}
                     </p>
                     <div className="p-1 border border-brand-border rounded-sm opacity-0 group-hover:opacity-100 transition-all transform translate-y-1 group-hover:translate-y-0 bg-brand-bg shrink-0">
