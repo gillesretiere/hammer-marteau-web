@@ -72,7 +72,7 @@ const PortfolioPage = () => {
         {/* Grille Mosaïque Adaptative (Plus de hauteur bloquée à 220px) */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (

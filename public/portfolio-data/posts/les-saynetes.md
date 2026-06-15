@@ -3,7 +3,7 @@ title: "Les Saynètes — Expression numérique et médiation en santé"
 slug: "les-saynetes"
 date: "2026-05-31"
 client: "ASAMLA (Association Santé Migrants Loire-Atlantique)"
-partenaire: "ARS (Agence Régionale de Santé)"
+partenaire: "ARS (Agence Régionale de Santé), Association Montjoie"
 role: "Conception UX / Architecture Web / Développement React"
 tags: ["React", "Multilinguisme", "Médiation", "Inclusion"]
 url: "https://saynetes.fr"
@@ -14,7 +14,7 @@ url: "https://saynetes.fr"
 ## Le Contexte et L'Alliance
 Dans le champ médico-social, la barrière de la langue constitue un obstacle majeur à l'accès aux soins et aux droits fondamentaux. Face à ce constat, l'**ASAMLA** mène des actions de médiation auprès des populations allophones. 
 
-En alliance avec l'association et avec le soutien de l'**ARS**, **Hammer & Marteau** a été mandaté pour concevoir une solution numérique capable de prolonger l'action des médiateurs sur le terrain à travers un outil d'apprentissage et d'expression autonome.
+En alliance avec l'association et avec le soutien financier de l'**ARS**, **Hammer & Marteau** a proposé une solution numérique capable de prolonger l'action des médiateurs sur le terrain à travers un outil d'apprentissage et d'expression autonome.
 
 ## Le Problème
 Les outils d'information institutionnels classiques (brochures papier, sites web textuels denses) échouent souvent auprès des publics migrants pour plusieurs raisons :
@@ -26,7 +26,7 @@ Les outils d'information institutionnels classiques (brochures papier, sites web
 Le projet **"Les Saynètes"** se matérialise sous la forme d'une application web mobile-first ultra-épurée, articulée autour de scénarios du quotidien (visite chez le médecin, guichet de la sécurité sociale, pharmacie).
 
 ### 1. Architecture Multilingue Avancée
-- Intégration d'un système audio natif permettant d'écouter les dialogues en 12 langues (dont l'Arabe littéraire, le Dari, le Pachto et le Soninké).
+- Intégration d'un système audio natif permettant d'écouter les dialogues en 7 langues (dont l'Arabe littéraire, le Russe, le Roumain et le Turc).
 - Changement de langue à la volée sans rechargement de page pour permettre une utilisation conjointe par le médiateur et l'usager.
 - Prise en charge native des typographies non-latines et des sens de lecture alternés (RTL - Right to Left) pour les langues concernées.
 
@@ -46,4 +46,4 @@ Inspiré par nos lignes directrices géométriques et minimalistes, l'interface 
 ```
 
 ## Impact et Perspectives
-Déployée auprès des équipes terrain de l'ASAMLA, la plateforme "Les Saynètes" est devenue un outil de référence pour amorcer le dialogue lors des ateliers collectifs de santé. Ce projet démontre qu'en liant technique rigoureuse et humanité, le numérique peut devenir un vecteur puissant d'inclusion sociale.
+Déployée auprès des équipes terrain de l'ASAMLA, la plateforme "Les Saynètes" vise à devenir un outil de référence pour amorcer le dialogue lors des ateliers collectifs de santé. Ce projet démontre qu'en liant technique rigoureuse et humanité, le numérique peut devenir un vecteur puissant d'inclusion sociale.

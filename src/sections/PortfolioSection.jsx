@@ -9,7 +9,7 @@ const PortfolioSection = () => {
 
   useEffect(() => {
     // Récupération du catalogue
-    fetch('/portfolio/index.json')
+    fetch('/portfolio-data/index.json')
       .then((res) => res.json())
       .then((data) => {
         // Filtre rigoureux pour ne garder que les projets mis en avant (featured: true)
