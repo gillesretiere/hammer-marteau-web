@@ -15,11 +15,10 @@ const Navbar = () => {
   const languages = [
     { code: 'fr', label: 'Français' },
     { code: 'en', label: 'English' },
-    { code: 'ar', label: 'العربية' }
   ];
 
   return (
-    <nav className="fixed w-full z-[100] bg-main-bg/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <nav className="fixed w-full z-[100] bg-main-bg/80 border-b border-slate-200 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link
           to="/"

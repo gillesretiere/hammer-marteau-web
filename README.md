@@ -18,5 +18,6 @@ If you are developing a production application, we recommend using TypeScript wi
 # Build
 ```
 cd ~/projects/langdeck/venv/src/hammer-web/build$ 
+npm run dev
 npm run build
 ```
