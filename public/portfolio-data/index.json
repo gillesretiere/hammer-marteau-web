@@ -8,15 +8,5 @@
     "featured": true,
     "gridSpan": "md:col-span-2 md:row-span-2",
     "imageUrl": "/images/portfolio/saynetes-cover.jpg"
-  },
-  {
-    "id": "trad-sante",
-    "title": "Traduction Santé AI",
-    "description": "Outil d'assistance basé sur l'IA supervisée pour la traduction de notices médicales, en 12 langues.",
-    "tags": ["Tailwind CSS", "IA", "Inclusion"],
-    "slug": "traduction-sante-ai",
-    "featured": false,
-    "gridSpan": "md:col-span-1 md:row-span-1",
-    "imageUrl": "/images/diabete-cover.png"
   }
 ]

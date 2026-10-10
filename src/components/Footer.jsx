@@ -35,14 +35,6 @@ const Footer = () => {
                 <span className="w-1.5 h-1.5 bg-brand-accent rounded-full"></span>
                 ASAMLA — Médiation en Santé
               </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-brand-accent rounded-full"></span>
-                ARS — Accès aux Droits & Inclusion
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-brand-accent rounded-full"></span>
-                Laboratoire de Multilinguisme Numérique
-              </li>
             </ul>
           </div>
 
