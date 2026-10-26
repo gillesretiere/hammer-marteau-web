@@ -1,261 +1,124 @@
 @import url('https://use.typekit.net/tjn2ftb.css');
-/* mui fonts */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Cible tout élément dont la direction effective est de droite à gauche */
+/* ── RTL (arabe) ───────────────────────────────────────── */
 :dir(rtl) {
   font-family: 'IBM Plex Sans Arabic', sans-serif !important;
   text-align: right;
   line-height: 1.8;
 }
+:dir(rtl) .badge-lang { margin-right: 0; margin-left: 8px; }
 
-/* Optionnel : Ajustement spécifique pour les listes ou badges en RTL */
-:dir(rtl) .badge-lang {
-  margin-right: 0;
-  margin-left: 8px;
-}
-
+/* ── LIGHT MODE (défaut) ────────────────────────────────── */
 :root {
-  --bg: #F0F4F8;
-  --surface: #FFFFFF;
-  --primary: #6366f1; /* Indigo vibrant par exemple */
-  --accent: #34d399;  /* Menthe fraîche */
-  /* Indigo vibrant */
-  --primary-hover: #4338CA;
-  --text-h: #1A202C;
-  --text-b: #2D3748;
-  --text-m: #718096;
-  --border: #CBD5E0;
-  /* Vert émeraude (Inclusion et vitalité) */
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  /* Fonds */
+  --bg:           #e6e2db;
+  --bg-card:      #f0eee9;
+  --surface:      #faf9f7;
+  /* Couleurs */
+  --primary:      #468faf;
+  --primary-hover:#3a7a97;
+  --accent:       #468faf;
+  --accent2:      #3c096c;
+  /* Texte */
+  --text-h:       #012a4a;
+  --text-b:       #2d2926;
+  --text-m:       #6b6360;
+  /* Bords & ombres */
+  --border:       #b8b0a8;
+  --border-dark:  #252530;
+  --card-shadow:  0 2px 8px rgba(1,42,74,.08);
 }
 
+/* ── DARK MODE ──────────────────────────────────────────── */
 .dark {
-  /* --- MODE SOMBRE : NUMÉRIQUE INCLUSIF --- */
-  --bg: #0F172A;
-  /* Fond ardoise profond */
-  --surface: #1E293B;
-  /* Surfaces plus légères */
-  --primary: #818CF8;
-  /* Indigo clair vibrant */
-  --primary-hover: #A5B4FC;
-  --text-h: #F8FAFC;
-  /* Blanc éclatant */
-  --text-b: #E2E8F0;
-  /* Gris clair pour le corps */
-  --text-m: #94A3B8;
-  /* Gris bleu pour les éléments discrets */
-  --border: #334155;
-  /* Bordures foncées */
-  --accent: #34D399;
-  /* Menthe pour le contraste */
-  --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-
+  --bg:           #0d1117;
+  --bg-card:      #161b22;
+  --surface:      #1e2530;
+  --primary:      #5ba3c4;
+  --primary-hover:#7ab8d4;
+  --accent:       #5ba3c4;
+  --accent2:      #a78bfa;
+  --text-h:       #e6e2db;
+  --text-b:       #c8c0b8;
+  --text-m:       #8888a0;
+  --border:       #30363d;
+  --border-dark:  #30363d;
+  --card-shadow:  0 4px 16px rgba(0,0,0,.4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --- MODE SOMBRE : NUMÉRIQUE INCLUSIF --- */
-    --bg: #0F172A;
-    /* Fond ardoise profond */
-    --surface: #1E293B;
-    /* Surfaces plus légères */
-    --primary: #818CF8;
-    /* Indigo clair vibrant */
-    --primary-hover: #A5B4FC;
-    --text-h: #F8FAFC;
-    /* Blanc éclatant */
-    --text-b: #E2E8F0;
-    /* Gris clair pour le corps */
-    --text-m: #94A3B8;
-    /* Gris bleu pour les éléments discrets */
-    --border: #334155;
-    /* Bordures foncées */
-    --accent: #34D399;
-    /* Menthe pour le contraste */
-    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+    --bg:           #0d1117;
+    --bg-card:      #161b22;
+    --surface:      #1e2530;
+    --primary:      #5ba3c4;
+    --primary-hover:#7ab8d4;
+    --accent:       #5ba3c4;
+    --accent2:      #a78bfa;
+    --text-h:       #e6e2db;
+    --text-b:       #c8c0b8;
+    --text-m:       #8888a0;
+    --border:       #30363d;
+    --border-dark:  #30363d;
+    --card-shadow:  0 4px 16px rgba(0,0,0,.4);
   }
 }
 
+/* ── BASE ───────────────────────────────────────────────── */
 body {
   background-color: var(--bg);
   color: var(--text-h);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 #root {
-  /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-
-
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-/* Style sur-mesure pour le rendu Markdown de Hammer & Marteau */
-.markdown-body {
-  text-align: left; /* Aligne le texte à gauche (annule le centrage hérité) */
-  color: var(--text-b);
-  font-family: var(--font-sans, sans-serif);
-  line-height: 1.7;
-}
-
-/* Titres */
-.markdown-body h2 {
-  font-size: 1.75rem;
-  font-weight: 900;
-  color: var(--text-h);
-  text-transform: uppercase;
-  letter-spacing: -0.025em;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  border-b: 1px solid var(--border);
-  padding-bottom: 0.5rem;
-}
-
-.markdown-body h3 {
-  font-size: 1.25rem;
+h1,h2,h3,h4 {
+  font-family: articulat-cf, sans-serif;
   font-weight: 700;
   color: var(--text-h);
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
 }
 
-/* Paragraphes et listes */
-.markdown-body p {
-  margin-bottom: 1.25rem;
+/* ── MARKDOWN ───────────────────────────────────────────── */
+.markdown-body {
+  text-align: left;
+  color: var(--text-b);
+  line-height: 1.75;
 }
-
-.markdown-body ul, .markdown-body ol {
-  margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
+.markdown-body h2 {
+  font-size: 1.5rem; font-weight: 900; color: var(--text-h);
+  text-transform: uppercase; letter-spacing: -.02em;
+  margin: 2.5rem 0 1rem;
+  border-bottom: 1px solid var(--border); padding-bottom: .5rem;
 }
-
+.markdown-body h3 {
+  font-size: 1.15rem; font-weight: 700; color: var(--text-h);
+  margin: 2rem 0 .75rem;
+}
+.markdown-body p  { margin-bottom: 1.25rem; }
+.markdown-body ul,
+.markdown-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
 .markdown-body ul { list-style-type: disc; }
 .markdown-body ol { list-style-type: decimal; }
-
-.markdown-body li {
-  margin-bottom: 0.5rem;
-}
-
-/* Citations blockquote */
+.markdown-body li { margin-bottom: .5rem; }
 .markdown-body blockquote {
   border-left: 3px solid var(--accent);
-  padding-left: 1rem;
-  font-style: italic;
-  color: var(--text-m);
-  margin: 1.5rem 0;
+  padding-left: 1rem; font-style: italic;
+  color: var(--text-m); margin: 1.5rem 0;
 }
-
-/* Style des Tableaux */
-.markdown-body table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: 0.875rem;
-}
-
-.markdown-body th {
-  background-color: rgba(255, 255, 255, 0.05); /* Légère surbrillance */
-  color: var(--text-h);
-  font-weight: bold;
-  border: 1px solid var(--border);
-  padding: 0.75rem 1rem;
-  text-align: left;
-}
-
-.markdown-body td {
-  border: 1px solid var(--border);
-  padding: 0.75rem 1rem;
-}
-
-.markdown-body tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.02); /* Effet zébré discret */
-}
+.markdown-body table { width:100%; border-collapse:collapse; margin:2rem 0; font-size:.875rem; }
+.markdown-body th { background:rgba(70,143,175,.08); color:var(--text-h); font-weight:bold; border:1px solid var(--border); padding:.75rem 1rem; text-align:left; }
+.markdown-body td { border:1px solid var(--border); padding:.75rem 1rem; }
+.markdown-body img { max-width:100%; border-radius:8px; margin:1.5rem 0; }

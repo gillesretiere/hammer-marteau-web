@@ -1,22 +1,13 @@
 import React from 'react';
-import { useTheme } from '../hooks/useTheme'; // Import nommé avec { }
-import Navbar from "../navigation/Navbar";
-import { Hero, DownloadSection, PortfolioSection, } from "../sections/index.js";
-import HomePage from './HomePage.jsx';
-import { Home } from 'lucide-react';
+import { HeroSection, ProjectsSection, DownloadSection, ContactSection } from '../sections/index.js';
 
+const LandingPage = () => (
+  <>
+    <HeroSection />
+    <ProjectsSection />
+    <DownloadSection />
+    <ContactSection />
+  </>
+);
 
-
-const LandingPage = () => {
-  // Si vous avez besoin de savoir si on est en mode sombre ici :
-  const { isDark } = useTheme();
-  return (
-    <>
-      <Navbar />
-      <HomePage />
-      <PortfolioSection/>
-    </>
-  )
-}
-
-export default LandingPage
+export default LandingPage;

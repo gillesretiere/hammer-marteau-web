@@ -1,38 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  darkMode: 'class', // 'class' permet de basculer manuellement
+  content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
-      boxShadow: {
-        'custom-card': 'var(--card-shadow)',
-      },
       colors: {
-        // Ces noms ne changent jamais, seule la valeur CSS change
         brand: {
-          bg: 'var(--bg)',
+          bg:      'var(--bg)',
+          card:    'var(--bg-card)',
           surface: 'var(--surface)',
           primary: 'var(--primary)',
-          hover: 'var(--primary-hover)',
+          hover:   'var(--primary-hover)',
           heading: 'var(--text-h)',
-          body: 'var(--text-b)',
-          muted: 'var(--text-m)', // Pour les captions
-          border: 'var(--border)',
-          accent: 'var(--accent)',
+          body:    'var(--text-b)',
+          muted:   'var(--text-m)',
+          border:  'var(--border)',
+          accent:  'var(--accent)',
+          accent2: 'var(--accent2)',
         }
       },
       fontFamily: {
-        primary: ["articulat-cf, sans-serif"],
-        secondary: ["artifex-cf, serif"],
+        primary:   ['articulat-cf', 'sans-serif'],
+        secondary: ['artifex-cf',   'serif'],
       },
-      animation: { 'marquee': 'marquee 30s linear infinite' },
-      keyframes: { marquee: { '0%': { transform: 'translateX(0%)' }, '100%': { transform: 'translateX(-100%)' } } },
+      boxShadow: {
+        card: 'var(--card-shadow)',
+      },
+      animation:  { marquee: 'marquee 30s linear infinite' },
+      keyframes:  { marquee: { '0%': { transform:'translateX(0%)' }, '100%': { transform:'translateX(-100%)' } } },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'), // <-- Ajoute cette ligne ici
-  ],
+  plugins: [require('@tailwindcss/typography')],
 }
