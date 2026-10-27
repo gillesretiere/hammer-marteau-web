@@ -5,47 +5,38 @@
     "date": "2026-04-03",
     "excerpt": "L'IA ne laisse personne indifférent, particulièrement dans les domaines artistiques. Certains auteurs sont vent debout. Mais n'est-ce pas un combat d'arrière-garde ?",
     "fileName": "ecrivain-face-ia.md",
-    "tags": ["IA", "Écriture"],
+    "tags": [
+      "IA",
+      "Écriture"
+    ],
     "readingTime": "10 min",
     "cover": ""
   },
   {
-    "id": "developper-avec-ia-sudoku",
-    "title": "Développer avec l'IA : étude de cas — un jeu de sudoku",
-    "date": "2026-05-12",
-    "excerpt": "Comment partir d'une idée floue et construire progressivement un outil numérique avec l'IA comme partenaire de développement.",
-    "fileName": "developper-avec-ia-sudoku.md",
-    "tags": ["IA", "Développement"],
-    "readingTime": "6 min",
-    "cover": ""
-  },
-  {
-    "id": "ia-co-auteur-altona",
-    "title": "L'IA comme co-auteur : ce que j'ai appris en écrivant ALTONA",
-    "date": "2026-05-28",
-    "excerpt": "Retour d'expérience sur l'usage des LLMs en projet littéraire — entre brainstorming brillant et qualité d'écriture inégale.",
-    "fileName": "ia-co-auteur-altona.md",
-    "tags": ["IA", "Écriture", "ALTONA"],
-    "readingTime": "8 min",
-    "cover": ""
-  },
-  {
-    "id": "atelier-ecriture-01",
-    "title": "Atelier d'écriture 1/5 — Structure narrative et méthode",
-    "date": "2025-09-01",
-    "excerpt": "Techniques de structure narrative issues des professionnels — Truby, Scott Bell, Elizabeth George — et comment les appliquer concrètement.",
-    "fileName": "Atelier ecriture-cccp_01.md",
-    "tags": ["Écriture", "Méthode"],
+    "id": "developper-avec-ia-sudoku-01",
+    "title": "Développer un moteur de Sudoku déterministe et pédagogique. Étape 1 — Module core_board : Théorie et Masques Binaires (Bitmasks)",
+    "date": "2026-10-26",
+    "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
+    "fileName": "Logic_and_reality_in_sudoku_01.md",
+    "tags": [
+      "IA",
+      "Sudoku",
+      "Développement"
+    ],
     "readingTime": "12 min",
     "cover": ""
   },
   {
-    "id": "developper-avec-ia-sudoku-01",
-    "title": "Dans la logique de l'IA : étude de cas — un moteur de Sudoku",
-    "date": "2025-09-01",
+    "id": "developper-avec-ia-sudoku-02",
+    "title": "Développer un moteur de Sudoku - Étape 2 : Le solveur d'unicité DLX",
+    "date": "2026-10-27",
     "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
-    "fileName": "Logic_and_reality_in_sudoku_01.md",
-    "tags": ["IA", "Sudoku", "Développement"],
+    "fileName": "docs_02_solver_dlx_theory.md",
+    "tags": [
+      "IA",
+      "Sudoku",
+      "Développement"
+    ],
     "readingTime": "12 min",
     "cover": ""
   }
