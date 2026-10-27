@@ -39,5 +39,19 @@
     ],
     "readingTime": "12 min",
     "cover": ""
+  },
+  {
+    "id": "developper-avec-ia-sudoku-03",
+    "title": "Développer un moteur de Sudoku - Étape 3 : L'Évaluateur Logique Formel (SE Rating - Norme Berthier)",
+    "date": "2026-10-28",
+    "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
+    "fileName": "docs_03_solver_eval_theory.md",
+    "tags": [
+      "IA",
+      "Sudoku",
+      "Développement"
+    ],
+    "readingTime": "12 min",
+    "cover": ""
   }
 ]

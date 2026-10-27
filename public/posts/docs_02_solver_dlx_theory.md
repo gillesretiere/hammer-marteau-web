@@ -25,12 +25,15 @@ $$\text{Nombre total de choix} = 9 \text{ lignes} \times 9 \text{ colonnes} \tim
 
 Chaque ligne de la matrice binaire comporte exactement quatre `1`, correspondant aux quatre contraintes satisfaites par ce placement :
 
-$$\text{Indices des contraintes pour } (r, c, d) : \begin{cases} 
+$$\text{Indices des contraintes pour } (r, c, d) : $$
+$$
+\begin{cases} 
 C_1 = 9 \cdot r + c \\ 
 C_2 = 81 + 9 \cdot r + (d - 1) \\ 
 C_3 = 162 + 9 \cdot c + (d - 1) \\ 
-C_4 = 243 + 9 \cdot \lfloor \frac{r}{3} \times 3 + \frac{c}{3} \rfloor + (d - 1) 
-\end{cases}$$
+C_4 = 243 + 9 \cdot \left\lfloor \frac{r}{3} \times 3 + \frac{c}{3} \right\rfloor + (d - 1) 
+\end{cases}
+$$
 
 ---
 
