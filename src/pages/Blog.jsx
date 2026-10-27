@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, ArrowRight, BookOpen } from 'lucide-react';
 import Markdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import remarkGfm from 'remark-gfm';
 import Navbar from '../navigation/Navbar'; // 1. Intégration de votre Navbar
 import { logo_true_red, hm_logo_transparent_white, hm_logo_transparent_dark, } from "../assets/img/index.js";
@@ -103,7 +106,7 @@ const Blog = () => {
               ) : (
                 /* Conteneur de rendu du texte brut ou parsé */
                 <div className="prose dark:prose-invert max-w-none text-left">
-                  <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+                  <Markdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{markdownContent}</Markdown>
 
                 </div>
               )}
