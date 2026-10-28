@@ -13,45 +13,17 @@
     "cover": ""
   },
   {
-    "id": "developper-avec-ia-sudoku-01",
-    "title": "Développer un moteur de Sudoku déterministe et pédagogique. Étape 1 — Module core_board : Théorie et Masques Binaires (Bitmasks)",
-    "date": "2026-10-26",
+    "id": "sudoku_generator_all",
+    "title": "Développer un moteur de Sudoku - 5 étapes",
+    "date": "2026-11-01",
     "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
-    "fileName": "Logic_and_reality_in_sudoku_01.md",
+    "fileName": "post_on_sudoku_generator_all.md",
     "tags": [
       "IA",
       "Sudoku",
       "Développement"
     ],
     "readingTime": "12 min",
-    "cover": ""
-  },
-  {
-    "id": "developper-avec-ia-sudoku-02",
-    "title": "Développer un moteur de Sudoku - Étape 2 : Le solveur d'unicité DLX",
-    "date": "2026-10-27",
-    "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
-    "fileName": "docs_02_solver_dlx_theory.md",
-    "tags": [
-      "IA",
-      "Sudoku",
-      "Développement"
-    ],
-    "readingTime": "12 min",
-    "cover": ""
-  },
-  {
-    "id": "developper-avec-ia-sudoku-03",
-    "title": "Développer un moteur de Sudoku - Étape 3 : L'Évaluateur Logique Formel (SE Rating - Norme Berthier)",
-    "date": "2026-10-28",
-    "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
-    "fileName": "docs_03_solver_eval_theory.md",
-    "tags": [
-      "IA",
-      "Sudoku",
-      "Développement"
-    ],
-    "readingTime": "12 min",
-    "cover": ""
+    "cover": "/images/portfolio/saynetes-cover.jpg"
   }
 ]

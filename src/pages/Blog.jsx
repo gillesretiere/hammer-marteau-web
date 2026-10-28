@@ -65,7 +65,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-brand-bg text-brand-body transition-colors duration-300 relative">
       {/* Inclusion de la Navbar en haut de page */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Trame de fond graphique */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-10 pointer-events-none" />

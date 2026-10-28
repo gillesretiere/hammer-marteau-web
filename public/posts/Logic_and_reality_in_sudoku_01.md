@@ -193,9 +193,3 @@ Pour garantir des performances maximales lors du creusement et du solving, nous 
 2. **`__builtin_ctz(unsigned int x)`** :
    Exécute l'instruction `CTZ` (*Count Trailing Zeros* / `TZCNT`). Pour un masque ayant un seul candidat comme $0000\,0000\,0000\,1000_2$ (chiffre 3), `__builtin_ctz` retourne directement `3`, éliminant le besoin de faire une boucle de recherche.
 
-```math
-\begin{align*}
-\Delta t &=  \frac{d(b_i, a_i)}{c} + \Delta t_{b_i} + \Delta t_{add} \\
-&\approx
-\end{align*}
-```
