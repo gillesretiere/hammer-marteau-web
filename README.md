@@ -1,23 +1,32 @@
-# React + Vite
+# hammer-marteau.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site de Hammer & Marteau : application Vite + React (react-router, Tailwind, framer-motion), plus quelques pages HTML statiques posées à côté.
 
-Currently, two official plugins are available:
+## Travailler en local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-# Build
-```
-cd ~/projects/langdeck/venv/src/hammer-web/build$ 
+```bash
+npm install
 npm run dev
-npm run build
 ```
+
+## Où sont les contenus
+
+| Contenu | Fichiers |
+|---|---|
+| Projets du portfolio | un `.md` par projet dans `public/portfolio-data/posts/`, listé dans `public/portfolio-data/index.json` |
+| Articles du blog | un `.md` par article dans `public/posts/`, listé dans `public/posts/index.json` |
+| Pages statiques | `public/cc-sudoku/` (page de l'app, Assistance, Confidentialité, version anglaise dans `en/`), `public/mentions-legales/` |
+
+Un fichier `.md` absent de son `index.json` n'apparaît pas sur le site.
+
+Les pages statiques n'appellent rien d'extérieur (polices du système, pas de script) et ne dépendent pas de l'application React. Les adresses `/cc-sudoku/assistance/` et `/cc-sudoku/confidentialite/` sont déclarées chez Apple : **elles ne doivent jamais changer**.
+
+## Déployer
+
+1. Sur le VPS, dans `~/projects/langdeck/venv/src/hammer-web` : `git pull`, puis `npm run build`. Le résultat sort dans **`build/`** (pas `dist/`), avec le JavaScript et le CSS dans `build/static/`.
+2. Copier le **contenu** de `build/` vers `/var/www/html`, en ajoutant et en remplaçant, **sans jamais supprimer** : le serveur contient des fichiers qui ne sont pas dans le dépôt (les livrets Saynètes, dans `/assets/livrets/`).
+3. Vérifier dans un navigateur : `/`, `/blog`, `/cc-sudoku/`, `/cc-sudoku/assistance/`, `/cc-sudoku/confidentialite/`, `/mentions-legales/`.
+
+nginx sert d'abord un fichier ou un dossier existant (`index.html`), sinon l'application React (`try_files $uri $uri/ /index.html`). C'est ce qui permet aux pages statiques de vivre à côté de l'application.
+
+`build/` n'est pas suivi par git.

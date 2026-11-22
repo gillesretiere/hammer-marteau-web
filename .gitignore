@@ -23,5 +23,3 @@ build
 *.njsproj
 *.sln
 *.sw?
-build/index.html
-build/index.html

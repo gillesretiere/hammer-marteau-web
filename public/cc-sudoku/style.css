@@ -40,3 +40,19 @@ a { color: var(--accent); }
 dt { font-weight: 600; margin-top: 18px; }
 dd { margin: 4px 0 0; }
 footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--trait); color: var(--discret); font-size: 14px; }
+
+/* Page de présentation de l'app (/cc-sudoku/ et /cc-sudoku/en/) */
+.presentation header { margin-bottom: 20px; }
+.presentation header img { width: 88px; height: 88px; border-radius: 20px; }
+.presentation h1 { font-size: 34px; }
+.promesse { font-size: 21px; line-height: 1.45; margin: 0 0 20px; text-wrap: balance; }
+.disponible { display: inline-block; padding: 10px 18px; border-radius: 12px; background: var(--encre); color: var(--fond); font-weight: 600; font-size: 15px; text-decoration: none; }
+.captures { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 28px -16px 8px; padding: 4px 16px 12px; }
+.captures figure { flex: 0 0 min(62%, 240px); margin: 0; scroll-snap-align: start; }
+.captures img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid var(--trait); }
+.captures figcaption { font-size: 14px; color: var(--discret); margin-top: 8px; }
+.temps { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.temps li { background: var(--carte); border: 1px solid var(--trait); border-radius: 12px; padding: 12px 16px; }
+.temps strong { color: var(--accent); }
+.langue { position: absolute; top: max(16px, env(safe-area-inset-top)); right: max(16px, env(safe-area-inset-right)); font-size: 14px; }
+footer a { color: var(--discret); }
