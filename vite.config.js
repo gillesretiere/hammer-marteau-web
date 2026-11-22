@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: './', // Ou './' si vous déployez dans un sous-dossier
   plugins: [react()],
   server: {
     host: true, // Nécessaire pour exposer le serveur sur le réseau du VPS
@@ -17,6 +16,6 @@ export default defineConfig({
     outDir: 'build', // Force la sortie dans /build au lieu de /dist
     assetsDir: 'static', // Range les JS/CSS dans /static au lieu de /assets
   },
-  // Renseigne la base avec un slash absolu pour fixer les chemins des assets en production
+  // Chemins absolus : le site est servi à la racine du domaine
   base: '/',
 })

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, ArrowRight, BookOpen } from 'lucide-react';
 import Markdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import remarkGfm from 'remark-gfm';
-import Navbar from '../navigation/Navbar'; // 1. Intégration de votre Navbar
-import { logo_true_red, hm_logo_transparent_white, hm_logo_transparent_dark, } from "../assets/img/index.js";
 import { useTheme } from '../hooks/useTheme';
 
 
@@ -62,7 +63,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-brand-bg text-brand-body transition-colors duration-300 relative">
       {/* Inclusion de la Navbar en haut de page */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Trame de fond graphique */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-10 pointer-events-none" />
@@ -103,7 +104,7 @@ const Blog = () => {
               ) : (
                 /* Conteneur de rendu du texte brut ou parsé */
                 <div className="prose dark:prose-invert max-w-none text-left">
-                  <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+                  <Markdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{markdownContent}</Markdown>
 
                 </div>
               )}
