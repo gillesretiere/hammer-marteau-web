@@ -15,7 +15,6 @@ const Navbar = () => {
   const languages = [
     { code: 'fr', label: 'Français' },
     { code: 'en', label: 'English' },
-    { code: 'ar', label: 'العربية' },
   ];
 
   const navLinks = [

@@ -6,8 +6,6 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import remarkGfm from 'remark-gfm';
-import Navbar from '../navigation/Navbar'; // 1. Intégration de votre Navbar
-import { logo_true_red, hm_logo_transparent_white, hm_logo_transparent_dark, } from "../assets/img/index.js";
 import { useTheme } from '../hooks/useTheme';
 
 
