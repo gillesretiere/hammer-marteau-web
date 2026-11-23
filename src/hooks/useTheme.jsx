@@ -1,29 +1,45 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
-// 1. Création du contexte
+// Thème clair ou sombre (HM-8).
+// Par défaut, le site suit le réglage de l'appareil, y compris s'il change pendant la visite.
+// Seul un clic sur le bouton est retenu ; s'il ramène au réglage de l'appareil, on l'oublie.
+// Nouvelle clé : l'ancienne (« hammer-theme ») enregistrait le thème dès la première visite.
+const CLE = 'hammer-theme-choix';
+const requete = '(prefers-color-scheme: dark)';
+
+const lire = () => {
+  try { return localStorage.getItem(CLE); } catch { return null; }
+};
+const ecrire = (v) => {
+  try { v ? localStorage.setItem(CLE, v) : localStorage.removeItem(CLE); } catch { /* sans stockage */ }
+};
+
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  // On récupère la préférence stockée ou celle du système
-  const [isDark, setIsDark] = useState(() => {
-    const savedTheme = localStorage.getItem('hammer-theme');
-    return savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  const [choix, setChoix] = useState(lire);
+  const [systemeSombre, setSystemeSombre] = useState(() => window.matchMedia(requete).matches);
 
-  // 2. Effet pour appliquer la classe au document
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (isDark) {
-      root.classList.add('dark');
-      localStorage.setItem('hammer-theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      localStorage.setItem('hammer-theme', 'light');
-    }
+    const mq = window.matchMedia(requete);
+    const suivre = (e) => setSystemeSombre(e.matches);
+    mq.addEventListener('change', suivre);
+    return () => mq.removeEventListener('change', suivre);
+  }, []);
+
+  const isDark = choix ? choix === 'dark' : systemeSombre;
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
   }, [isDark]);
 
-  // Fonction pour basculer le thème
-  const toggleTheme = () => setIsDark(!isDark);
+  const toggleTheme = () => {
+    const voulu = isDark ? 'light' : 'dark';
+    const commeSysteme = (voulu === 'dark') === systemeSombre;
+    const nouveau = commeSysteme ? null : voulu;
+    ecrire(nouveau);
+    setChoix(nouveau);
+  };
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>

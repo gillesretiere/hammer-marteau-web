@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Thème posé avant l'affichage, pour éviter un éclair clair en mode sombre (HM-8, voir useTheme). -->
+    <script>
+      try {
+        var c = localStorage.getItem('hammer-theme-choix');
+        if (c ? c === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
     <title>Hammer &amp; Marteau — Expression numérique</title>
     <meta name="description" content="Hammer &amp; Marteau, micro-agence nantaise : applications, sites, livrets et vidéos." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
