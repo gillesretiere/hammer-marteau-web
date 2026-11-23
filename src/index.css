@@ -14,60 +14,33 @@
 }
 :dir(rtl) .badge-lang { margin-right: 0; margin-left: 8px; }
 
-/* ── LIGHT MODE (défaut) ────────────────────────────────── */
+/* ── COULEURS (lot B : grille et filets) ─────────────────
+   Papier, encre, filets fins et forts, un seul accent.
+   Les anciennes variables (--bg, --text-h…) pointent sur les nouvelles,
+   pour que les pages pas encore refaites prennent la même palette. */
 :root {
-  /* Fonds */
-  --bg:           #e6e2db;
-  --bg-card:      #f0eee9;
-  --surface:      #faf9f7;
-  /* Couleurs */
-  --primary:      #468faf;
-  --primary-hover:#3a7a97;
-  --accent:       #468faf;
-  --accent2:      #3c096c;
-  /* Texte */
-  --text-h:       #012a4a;
-  --text-b:       #2d2926;
-  --text-m:       #6b6360;
-  /* Bords & ombres */
-  --border:       #b8b0a8;
-  --border-dark:  #252530;
-  --card-shadow:  0 2px 8px rgba(1,42,74,.08);
-}
+  --paper:       #FAFAF8;
+  --paper-2:     #F1F1EC;
+  --ink:         #1C1C1C;
+  --ink-soft:    #5E5E58;
+  --rule:        #D6D6D0;
+  --rule-strong: #1C1C1C;
+  --accent:      #D9480F;
 
-/* ── DARK MODE ──────────────────────────────────────────── */
+  --bg: var(--paper); --bg-card: var(--paper-2); --surface: var(--paper-2);
+  --primary: var(--accent); --primary-hover: var(--accent); --accent2: var(--ink);
+  --text-h: var(--ink); --text-b: var(--ink); --text-m: var(--ink-soft);
+  --border: var(--rule); --border-dark: var(--rule-strong);
+  --card-shadow: none;
+}
 .dark {
-  --bg:           #0d1117;
-  --bg-card:      #161b22;
-  --surface:      #1e2530;
-  --primary:      #5ba3c4;
-  --primary-hover:#7ab8d4;
-  --accent:       #5ba3c4;
-  --accent2:      #a78bfa;
-  --text-h:       #e6e2db;
-  --text-b:       #c8c0b8;
-  --text-m:       #8888a0;
-  --border:       #30363d;
-  --border-dark:  #30363d;
-  --card-shadow:  0 4px 16px rgba(0,0,0,.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:           #0d1117;
-    --bg-card:      #161b22;
-    --surface:      #1e2530;
-    --primary:      #5ba3c4;
-    --primary-hover:#7ab8d4;
-    --accent:       #5ba3c4;
-    --accent2:      #a78bfa;
-    --text-h:       #e6e2db;
-    --text-b:       #c8c0b8;
-    --text-m:       #8888a0;
-    --border:       #30363d;
-    --border-dark:  #30363d;
-    --card-shadow:  0 4px 16px rgba(0,0,0,.4);
-  }
+  --paper:       #16181C;
+  --paper-2:     #1F2227;
+  --ink:         #E8E8E3;
+  --ink-soft:    #9A9FA8;
+  --rule:        #33373E;
+  --rule-strong: #E8E8E3;
+  --accent:      #FF7A45;
 }
 
 /* ── BASE ───────────────────────────────────────────────── */
@@ -122,3 +95,12 @@ h1,h2,h3,h4 {
 .markdown-body th { background:rgba(70,143,175,.08); color:var(--text-h); font-weight:bold; border:1px solid var(--border); padding:.75rem 1rem; text-align:left; }
 .markdown-body td { border:1px solid var(--border); padding:.75rem 1rem; }
 .markdown-body img { max-width:100%; border-radius:8px; margin:1.5rem 0; }
+
+/* Maquette du lot B : accents à comparer (sélecteur visible en local seulement) */
+html[data-accent="rouge"]      { --accent: #C1272D; }
+html.dark[data-accent="rouge"] { --accent: #FF6B6B; }
+html[data-accent="bleu"]       { --accent: #2F7799; }
+html.dark[data-accent="bleu"]  { --accent: #5BA3C4; }
+
+/* Filets : fin entre les éléments, fort entre les sections (comme les traits de bloc d'une grille) */
+.rule-strong { border-top: 2px solid var(--rule-strong); }

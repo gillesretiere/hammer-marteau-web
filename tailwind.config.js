@@ -5,6 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        paper:  { DEFAULT: 'var(--paper)', 2: 'var(--paper-2)' },
+        ink:    { DEFAULT: 'var(--ink)', soft: 'var(--ink-soft)' },
+        rule:   { DEFAULT: 'var(--rule)', strong: 'var(--rule-strong)' },
+        accent: 'var(--accent)',
         brand: {
           bg:      'var(--bg)',
           card:    'var(--bg-card)',

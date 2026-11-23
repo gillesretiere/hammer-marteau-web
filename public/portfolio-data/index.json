@@ -1,12 +1,23 @@
 [
   {
+    "id": "cc-sudoku",
+    "title": "CC Sudoku",
+    "description": "Un sudoku pour iPhone et iPad qui explique chaque technique avant de donner la réponse.",
+    "tags": ["App iOS", "Flutter", "Moteur en C"],
+    "year": "2026",
+    "url": "/cc-sudoku/",
+    "featured": true,
+    "imageUrl": "/portfolio-data/images/cc-sudoku.jpg",
+    "imagePosition": "50% 24%"
+  },
+  {
     "id": "saynetes",
     "title": "Les Saynètes",
     "description": "Cartes interactives aidant à communiquer avec les populations allophones sur des sujets de santé.",
     "tags": ["React", "Multilinguisme", "Médiation"],
+    "year": "2026",
     "slug": "les-saynetes",
     "featured": true,
-    "gridSpan": "md:col-span-2 md:row-span-2",
-    "imageUrl": "/images/portfolio/saynetes-cover.jpg"
+    "imageUrl": "/portfolio-data/images/saynetes.jpg"
   }
 ]
