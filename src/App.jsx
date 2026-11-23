@@ -11,7 +11,6 @@ import SiteHeader    from './site/SiteHeader';
 import SiteFooter    from './site/SiteFooter';
 import AccentSwitcher from './site/AccentSwitcher';
 
-import './i18n/config';
 
 // Vers une page statique (hors application React) : rechargement complet.
 const GoStatic = ({ to }) => { window.location.replace(to); return null; };

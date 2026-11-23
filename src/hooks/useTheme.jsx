@@ -32,8 +32,8 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Hook personnalisé pour l'utiliser facilement
-// 3. Hook personnalisé pour utiliser le thème facilement
+// Hook pour lire et changer le thème. Il vit avec son fournisseur, d'où l'exception ci-dessous.
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
