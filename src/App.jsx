@@ -22,7 +22,7 @@ function App() {
       <Router>
         <div className="flex min-h-screen flex-col bg-paper text-ink">
           <SiteHeader />
-          <main className="flex-grow">
+          <main id="contenu" tabIndex={-1} className="flex-grow focus:outline-none">
             <Routes>
               <Route path="/"                element={<Home />} />
               <Route path="/portfolio"       element={<Portfolio />} />

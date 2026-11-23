@@ -113,3 +113,9 @@ html.dark[data-accent="bleu"]  { --accent: #5BA3C4; }
 
 /* Filets : fin entre les éléments, fort entre les sections (comme les traits de bloc d'une grille) */
 .rule-strong { border-top: 2px solid var(--rule-strong); }
+
+/* Focus clavier visible partout, dans la couleur d'accent (HM-19). La souris n'en déclenche pas. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
