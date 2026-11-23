@@ -25,7 +25,7 @@
   --ink-soft:    #5E5E58;
   --rule:        #D6D6D0;
   --rule-strong: #1C1C1C;
-  --accent:      #D9480F;
+  --accent:      #D9480F; /* Orange de CC Sudoku (HM-4), valeur à confirmer après la revue des couleurs de l'app du 24 nov. */
 
   --bg: var(--paper); --bg-card: var(--paper-2); --surface: var(--paper-2);
   --primary: var(--accent); --primary-hover: var(--accent); --accent2: var(--ink);
@@ -105,11 +105,6 @@ h1,h2,h3,h4 {
 .markdown-body td { border:1px solid var(--border); padding:.75rem 1rem; }
 .markdown-body img { max-width:100%; border-radius:8px; margin:1.5rem 0; }
 
-/* Maquette du lot B : accents à comparer (sélecteur visible en local seulement) */
-html[data-accent="rouge"]      { --accent: #C1272D; }
-html.dark[data-accent="rouge"] { --accent: #FF6B6B; }
-html[data-accent="bleu"]       { --accent: #2F7799; }
-html.dark[data-accent="bleu"]  { --accent: #5BA3C4; }
 
 /* Filets : fin entre les éléments, fort entre les sections (comme les traits de bloc d'une grille) */
 .rule-strong { border-top: 2px solid var(--rule-strong); }
