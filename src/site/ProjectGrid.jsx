@@ -25,13 +25,13 @@ const Soulignement = () => (
 );
 
 // Composition « cases » : cases espacées. Une gouttière de 24 px sépare les cases, image en 16/9 plus basse,
-// un filet fin au-dessus des textes.
+// un filet fin au-dessus des textes. 16 px d'air entre les étiquettes et le trait d'accent du survol.
 const Cases = ({ projects }) => (
   <div className={`grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 ${projects.length > 2 ? 'lg:grid-cols-3' : ''}`}>
     {projects.map((p) => (
       <ProjectLink key={p.id} project={p} className="group relative flex flex-col">
         <Vignette project={p} ratio="aspect-[16/9]" />
-        <div className="mt-4 flex flex-1 flex-col gap-2 border-t border-rule pt-3">
+        <div className="mt-4 flex flex-1 flex-col gap-2 border-t border-rule pb-4 pt-3">
           <div className="flex items-baseline justify-between gap-3">
             <h3 className="font-primary text-xl font-semibold tracking-tight text-ink">{p.title}</h3>
             {p.year && <span className="text-sm tabular-nums text-ink-soft">{p.year}</span>}
