@@ -23,9 +23,10 @@ const proseVars = {
   '--tw-prose-captions': 'var(--ink-soft)',
 };
 
-const Prose = ({ children }) => (
+// article : le corps prend --font-article (articles du blog) ; sinon la police du texte.
+const Prose = ({ children, article = false }) => (
   <div
-    style={proseVars}
+    style={article ? { ...proseVars, fontFamily: 'var(--font-article)' } : proseVars}
     className="prose prose-lg max-w-[68ch] prose-headings:font-primary prose-headings:tracking-tight prose-h2:mt-12 prose-h2:border-t prose-h2:border-rule prose-h2:pt-4 prose-h2:text-2xl prose-a:decoration-accent prose-a:decoration-2 prose-a:underline-offset-4 prose-pre:border prose-pre:border-rule prose-img:rounded-none"
   >
     <Markdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{children}</Markdown>

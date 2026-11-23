@@ -44,7 +44,16 @@
 }
 
 /* ── BASE ───────────────────────────────────────────────── */
+/* Polices (HM-5), retenues le 23 nov. : Articulat pour les titres et le texte,
+   Artifex (serif, même fonderie) pour le corps des articles du blog. */
+:root {
+  --font-titre: articulat-cf, sans-serif;
+  --font-texte: articulat-cf, sans-serif;
+  --font-article: artifex-cf, Georgia, serif;
+}
+
 body {
+  font-family: var(--font-texte);
   background-color: var(--bg);
   color: var(--text-h);
   transition: background 0.3s ease, color 0.3s ease;
@@ -59,7 +68,7 @@ body {
 }
 
 h1,h2,h3,h4 {
-  font-family: articulat-cf, sans-serif;
+  font-family: var(--font-titre);
   font-weight: 700;
   color: var(--text-h);
 }

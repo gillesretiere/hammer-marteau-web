@@ -24,7 +24,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        primary:   ['articulat-cf', 'sans-serif'],
+        primary:   ['var(--font-titre)'],
+        texte:     ['var(--font-texte)'],
         secondary: ['artifex-cf',   'serif'],
       },
       boxShadow: {

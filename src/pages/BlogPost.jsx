@@ -45,7 +45,7 @@ const BlogPost = () => {
           <div className="rule-strong pt-8 lg:col-span-9 lg:col-start-4">
             {body === null && <p className="text-ink-soft">Chargement…</p>}
             {body === false && <p className="text-ink-soft">Article introuvable.</p>}
-            {body && <Prose>{body}</Prose>}
+            {body && <Prose article>{body}</Prose>}
           </div>
         </div>
       )}
