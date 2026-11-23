@@ -6,6 +6,7 @@ import useIndex from '../site/useIndex';
 import { parseFrontmatter, dropLeadingH1 } from '../site/frontmatter';
 import NotFound from './NotFound';
 import Ressources from '../site/Ressources';
+import titre from '../site/titre';
 
 const Fact = ({ label, children }) => (
   <div className="border-b border-rule py-3 sm:border-b-0 sm:border-l sm:px-5 sm:first:border-l-0 sm:first:pl-0">
@@ -39,6 +40,7 @@ const ProjectDetail = () => {
 
   return (
     <Container>
+      <title>{titre(card?.title || meta.title)}</title>
       <div className="pt-8">
         <Link to="/portfolio" className="text-sm text-ink-soft hover:text-ink">← Portfolio</Link>
       </div>

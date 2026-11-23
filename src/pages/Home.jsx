@@ -5,6 +5,7 @@ import PostList from '../site/PostList';
 import useIndex from '../site/useIndex';
 import useMaquette from '../site/useMaquette';
 import accueil from '../contenus/accueil';
+import titre from '../site/titre';
 
 // Une seule image source, carrée. Le cadre change selon la largeur et l'image le remplit
 // en étant recadrée (object-cover) autour de son point d'intérêt (position).
@@ -65,6 +66,7 @@ const Home = () => {
 
   return (
     <Container>
+      <title>{titre()}</title>
       <Hero contenu={contenu} />
 
       <section className="mb-20">

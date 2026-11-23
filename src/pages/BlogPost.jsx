@@ -5,6 +5,7 @@ import Prose from '../site/Prose';
 import useIndex from '../site/useIndex';
 import { parseFrontmatter, dropLeadingH1 } from '../site/frontmatter';
 import NotFound from './NotFound';
+import titre from '../site/titre';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -28,6 +29,7 @@ const BlogPost = () => {
 
   return (
     <Container>
+      <title>{titre(post?.title || 'Blog')}</title>
       <div className="pt-8">
         <Link to="/blog" className="text-sm text-ink-soft hover:text-ink">← Blog</Link>
       </div>
