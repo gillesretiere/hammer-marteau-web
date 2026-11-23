@@ -4,7 +4,7 @@
 //   - phrase : une seule phrase, en taille de sous-titre, qui remplace les trois autres.
 // image : chemin dans public/ ; vide, une case grise tient la place.
 const accueil = {
-  lieu: 'Nantes, France',
+  lieu: 'Micro-agence',
   titre: 'Expression numérique',
   sousTitre: 'Sous-titre à trouver.',
   // Texte d'essai, moitié du texte long d'essai, pour juger la géométrie (23 nov.). À remplacer.
