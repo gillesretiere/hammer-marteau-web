@@ -47,6 +47,15 @@ const BlogPost = () => {
           <div className="rule-strong pt-8 lg:col-span-9 lg:col-start-4">
             {body === null && <p className="text-ink-soft">Chargement…</p>}
             {body === false && <p className="text-ink-soft">Article introuvable.</p>}
+            {/* Illustration en tête d'article, sur la largeur de la colonne de texte, cadrée en 3/2 (HM-27).
+                coverPosition (facultatif, dans posts/index.json) choisit la partie gardée, centre par défaut. */}
+            {body && post.cover && (
+              <div className="prose prose-lg mb-10 max-w-[68ch]" style={{ fontFamily: 'var(--font-article)' }}>
+                <div className="aspect-[3/2] overflow-hidden bg-paper-2">
+                  <img src={post.cover} alt="" className="!my-0 h-full w-full object-cover" style={{ objectPosition: post.coverPosition || '50% 50%' }} />
+                </div>
+              </div>
+            )}
             {body && <Prose article>{body}</Prose>}
           </div>
         </div>

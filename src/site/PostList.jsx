@@ -13,18 +13,29 @@ const Lire = () => <span className="text-sm text-ink">Lire <span className="text
 
 // Composition « cases » : même gouttière que les cases du portfolio (24 px), 3 au plus par rangée,
 // un filet fin au-dessus de chaque article. Sans image : le blog se lit, le portfolio se regarde.
-const Cases = ({ posts }) => (
+// Illustrations (HM-27) : montrées seulement si tous les articles en ont une, en 3/2 au-dessus du filet.
+const Cases = ({ posts }) => {
+  const illustre = posts.length > 0 && posts.every((p) => p.cover);
+  return (
   <div className={`grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 ${posts.length > 2 ? 'lg:grid-cols-3' : ''}`}>
     {posts.map((post) => (
-      <Link key={post.id} to={`/blog/${post.id}`} className="group flex flex-col gap-3 border-t border-rule pt-3">
+      <Link key={post.id} to={`/blog/${post.id}`} className="group flex flex-col gap-3">
+        {illustre && (
+          <div className="mb-1 aspect-[3/2] overflow-hidden bg-paper-2">
+            <img src={post.cover} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+          </div>
+        )}
+        <div className="flex flex-1 flex-col gap-3 border-t border-rule pt-3">
         <span className="text-sm tabular-nums text-ink-soft">{dateFr(post.date)}</span>
         <Titre className="text-xl">{post.title}</Titre>
         <p className="text-[15px] leading-relaxed text-ink-soft line-clamp-3">{post.excerpt}</p>
         <span className="mt-auto pt-1"><Lire /></span>
+        </div>
       </Link>
     ))}
   </div>
-);
+  );
+};
 
 // Composition « liste » : une ligne par article entre deux filets.
 // Date (2 col.), titre (4), extrait (5), lien (1). Sur iPhone : date, titre, extrait empilés.
