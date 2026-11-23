@@ -27,3 +27,5 @@ build
 # Vidéos originales, compressées puis déposées sur le serveur (HM-10)
 videos-source/
 videos-out/
+livrets-source/
+livrets-out/
