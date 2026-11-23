@@ -2,7 +2,6 @@ import React from 'react';
 import { Download, FileText, Video, Globe, ExternalLink, Play, } from 'lucide-react';
 import { s01a5es, s01a5pt } from "../../public/docs/index.js";
 import { s01a5fr_tn, s01a5ru_tn, s01a5ro_tn, s01a5en_tn, s01a5es_tn, s01a5pt_tn, s01a5ar_tn, s02a5pt_tn, generic_video_tn, saynetes_fr, video_saynetes_2026_O5, } from "../../public/thumbnails/index.js";
-import { saynetes_diabete_anim_barriere_langue_01, } from "../../public/videos/index.js";
 import BookViewer from '../components/BookViewer.jsx';
 
 const DownloadSection = () => {

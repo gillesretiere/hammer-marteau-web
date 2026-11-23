@@ -5,6 +5,7 @@ import Prose from '../site/Prose';
 import useIndex from '../site/useIndex';
 import { parseFrontmatter, dropLeadingH1 } from '../site/frontmatter';
 import NotFound from './NotFound';
+import Ressources from '../site/Ressources';
 
 const Fact = ({ label, children }) => (
   <div className="border-b border-rule py-3 sm:border-b-0 sm:border-l sm:px-5 sm:first:border-l-0 sm:first:pl-0">
@@ -76,6 +77,8 @@ const ProjectDetail = () => {
           <Prose>{dropLeadingH1(body)}</Prose>
         </div>
       </div>
+
+      <Ressources slug={slug} />
     </Container>
   );
 };

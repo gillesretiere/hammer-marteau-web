@@ -1,0 +1,26 @@
+{
+  "ressources": [
+    {
+      "titre": "Livrets",
+      "intro": "Diabète de type 2, chez le médecin : l'annonce de la maladie par le médecin traitant. Une saynète illustrée, en sept langues. PDF d'environ 15 Mo.",
+      "format": "livret",
+      "elements": [
+        { "langue": "Français", "lang": "fr", "titre": "Diabète – Chez le médecin", "image": "/portfolio-data/images/saynetes/livret-fr.jpg", "url": "/assets/livrets/SNDB-01-FR.pdf", "taille": "15 Mo" },
+        { "langue": "Anglais", "lang": "en", "titre": "Diabetes – At the doctor's", "image": "/portfolio-data/images/saynetes/livret-en.jpg", "url": "/assets/livrets/SNDB-01-EN.pdf", "taille": "16 Mo" },
+        { "langue": "Espagnol", "lang": "es", "titre": "Diabetes – En el médico", "image": "/portfolio-data/images/saynetes/livret-es.jpg", "url": "/assets/livrets/SNDB-01-ES.pdf", "taille": "16 Mo" },
+        { "langue": "Portugais", "lang": "pt", "titre": "Diabetes – No médico", "image": "/portfolio-data/images/saynetes/livret-pt.jpg", "url": "/assets/livrets/SNDB-01-PT.pdf", "taille": "16 Mo" },
+        { "langue": "Roumain", "lang": "ro", "titre": "Diabet – La doctor", "image": "/portfolio-data/images/saynetes/livret-ro.jpg", "url": "/assets/livrets/SNDB-01-RO.pdf", "taille": "16 Mo" },
+        { "langue": "Russe", "lang": "ru", "titre": "Диабет – У врача", "image": "/portfolio-data/images/saynetes/livret-ru.jpg", "url": "/assets/livrets/SNDB-01-RU.pdf", "taille": "16 Mo" },
+        { "langue": "Arabe", "lang": "ar", "titre": "السكري عند الطبيب", "image": "/portfolio-data/images/saynetes/livret-ar.jpg", "url": "/assets/livrets/SNDB-01-AR.pdf", "taille": "14 Mo" }
+      ]
+    },
+    {
+      "titre": "Vidéos",
+      "format": "video",
+      "elements": [
+        { "titre": "Présentation de l'application", "detail": "1 min 34 · Adobe Express et Premiere Pro", "image": "/portfolio-data/images/saynetes/video.jpg", "fichier": "/assets/video/saynetes-presentation.mp4" },
+        { "titre": "Clip pour les réseaux sociaux", "detail": "34 s · Premiere Pro", "image": "/portfolio-data/images/saynetes/clip.jpg", "ratio": "1/1", "fichier": "/assets/video/saynetes-clip.mp4" }
+      ]
+    }
+  ]
+}
