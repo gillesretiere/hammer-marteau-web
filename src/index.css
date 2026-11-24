@@ -25,7 +25,7 @@
   --ink-soft:    #5E5E58;
   --rule:        #D6D6D0;
   --rule-strong: #1C1C1C;
-  --accent:      #D9480F; /* Orange de CC Sudoku (HM-4), valeur à confirmer après la revue des couleurs de l'app du 24 nov. */
+  --accent:      #D9480F; /* Orange de CC Sudoku (HM-4), le même que les chiffres du joueur dans l'app, confirmé le 24 nov. */
 
   --bg: var(--paper); --bg-card: var(--paper-2); --surface: var(--paper-2);
   --primary: var(--accent); --primary-hover: var(--accent); --accent2: var(--ink);
@@ -40,7 +40,7 @@
   --ink-soft:    #9A9FA8;
   --rule:        #33373E;
   --rule-strong: #E8E8E3;
-  --accent:      #FF7A45;
+  --accent:      #FF7A45; /* Même orange, éclairci pour le fond sombre (6,9:1) ; le thème sombre de l'app est bleu (HM-4). */
 }
 
 /* ── BASE ───────────────────────────────────────────────── */
