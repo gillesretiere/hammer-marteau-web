@@ -1,4 +1,4 @@
-// Contenu du hero de l'accueil (HM-20). Textes provisoires (HM-9).
+// Contenu du hero de l'accueil (HM-20). Textes validés par Gilles le 24 nov. (HM-9).
 // Deux formes possibles, sans toucher à la mise en page :
 //   - titre, sousTitre et texte (chacun facultatif) ;
 //   - phrase : une seule phrase, en taille de sous-titre, qui remplace les trois autres.
@@ -7,8 +7,7 @@ const accueil = {
   lieu: 'Micro-agence',
   titre: 'Expression numérique',
   sousTitre: 'Design et fonctionnalité.',
-  // Texte d'essai, moitié du texte long d'essai, pour juger la géométrie (23 nov.). À remplacer.
-  texte: "Hammer & Marteau conçoit et développe des applications de bout en bout. Nous transformons les idées en solutions simples, avec une approche originale, qui consiste à concilier la logique numérique et l'illogisme romantique.",
+  texte: "Hammer & Marteau conçoit et développe des applications de bout en bout. Nous transformons une idée en un produit stylé et fonctionnel. Notre approche se veut originale et consiste à concilier la logique numérique et une part d'illogisme romantique.",
   phrase: '',
   image: '/images/accueil-hero.jpg',
   imageAlt: '',
