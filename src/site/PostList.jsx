@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import Brouillon from './Brouillon';
+import { estBrouillon } from './useIndex';
 
 const dateFr = (iso) =>
   new Date(iso).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -26,7 +28,7 @@ const Cases = ({ posts }) => {
           </div>
         )}
         <div className="flex flex-1 flex-col gap-3 border-t border-rule pt-3">
-        <span className="text-sm tabular-nums text-ink-soft">{dateFr(post.date)}</span>
+        <span className="text-sm tabular-nums text-ink-soft">{dateFr(post.date)}{estBrouillon(post) && <Brouillon className="ml-3" />}</span>
         <Titre className="text-xl">{post.title}</Titre>
         <p className="text-[15px] leading-relaxed text-ink-soft line-clamp-3">{post.excerpt}</p>
         <span className="mt-auto pt-1"><Lire /></span>
@@ -47,7 +49,7 @@ const Liste = ({ posts }) => (
         to={`/blog/${post.id}`}
         className="group grid grid-cols-1 gap-2 border-b border-rule py-5 lg:grid-cols-12 lg:gap-6"
       >
-        <span className="pt-0.5 text-sm tabular-nums text-ink-soft lg:col-span-2">{dateFr(post.date)}</span>
+        <span className="pt-0.5 text-sm tabular-nums text-ink-soft lg:col-span-2">{dateFr(post.date)}{estBrouillon(post) && <Brouillon className="ml-3" />}</span>
         <Titre className="text-xl lg:col-span-4">{post.title}</Titre>
         <p className="text-[15px] leading-relaxed text-ink-soft line-clamp-2 lg:col-span-5">{post.excerpt}</p>
         <span className="hidden pt-0.5 text-right lg:col-span-1 lg:block"><Lire /></span>

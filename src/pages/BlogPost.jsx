@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Container from '../site/Container';
 import Prose from '../site/Prose';
-import useIndex from '../site/useIndex';
+import useIndex, { estBrouillon } from '../site/useIndex';
+import Brouillon from '../site/Brouillon';
 import { parseFrontmatter, dropLeadingH1 } from '../site/frontmatter';
 import NotFound from './NotFound';
 import titre from '../site/titre';
@@ -36,6 +37,11 @@ const BlogPost = () => {
       {post && (
         <div className="grid grid-cols-1 lg:grid-cols-12">
           <header className="py-10 sm:py-14 lg:col-span-9 lg:col-start-4">
+            {estBrouillon(post) && (
+              <p className="mb-4 flex items-center gap-3 text-sm text-ink-soft">
+                <Brouillon /> Visible en local seulement, absent du site en ligne.
+              </p>
+            )}
             <p className="text-sm tabular-nums text-ink-soft">
               {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
               {post.readingTime && ` · ${post.readingTime}`}
