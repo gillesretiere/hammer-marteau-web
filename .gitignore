@@ -29,3 +29,6 @@ videos-source/
 videos-out/
 livrets-source/
 livrets-out/
+
+# Essais d'image du hero, hors de public/ pour ne pas partir avec le build (HM-20)
+hero-source/

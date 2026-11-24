@@ -6,13 +6,13 @@
 const accueil = {
   lieu: 'Micro-agence',
   titre: 'Expression numérique',
-  sousTitre: 'Sous-titre à trouver.',
+  sousTitre: 'Design et fonctionnalité.',
   // Texte d'essai, moitié du texte long d'essai, pour juger la géométrie (23 nov.). À remplacer.
-  texte: "Hammer & Marteau conçoit et développe des applications, des outils et des écrits, de l'idée jusqu'à la mise en ligne. Le code, le design et les mots sont pensés ensemble, par la même main, à Nantes.",
+  texte: "Hammer & Marteau conçoit et développe des applications de bout en bout. Nous transformons les idées en solutions simples, avec une approche originale, qui consiste à concilier la logique numérique et l'illogisme romantique.",
   phrase: '',
-  image: '',
+  image: '/images/accueil-hero.jpg',
   imageAlt: '',
-  imagePosition: '50% 50%',
+  imagePosition: '50% 90%',
 
   // Section portfolio (HM-21).
   // composition : 'cases' (cases espacées) ou 'index' (une ligne par projet).
