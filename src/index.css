@@ -1,18 +1,15 @@
 @import url('https://use.typekit.net/wpk6mjn.css'); /* Adobe Fonts : Articulat CF et Artifex CF seulement (HM-5) */
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ── RTL (arabe) ───────────────────────────────────────── */
+/* Les titres arabes des livrets utilisent la police arabe du système (HM-15 : plus d'appel à Google Fonts). */
 :dir(rtl) {
-  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
   text-align: right;
   line-height: 1.8;
 }
-:dir(rtl) .badge-lang { margin-right: 0; margin-left: 8px; }
 
 /* ── COULEURS (lot B : grille et filets) ─────────────────
    Papier, encre, filets fins et forts, un seul accent.
