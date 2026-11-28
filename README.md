@@ -1,6 +1,6 @@
 # hammer-marteau.com
 
-Site de Hammer & Marteau : application Vite + React (react-router, Tailwind, framer-motion), plus quelques pages HTML statiques posées à côté.
+Site de Hammer & Marteau : application Vite + React (react-router, Tailwind), plus quelques pages HTML statiques posées à côté.
 
 ## Travailler en local
 
@@ -23,9 +23,16 @@ Les pages statiques n'appellent rien d'extérieur (polices du système, pas de s
 
 ## Déployer
 
-1. Sur le VPS, dans `~/projects/langdeck/venv/src/hammer-web` : `git pull`, puis `npm run build`. Le résultat sort dans **`build/`** (pas `dist/`), avec le JavaScript et le CSS dans `build/static/`.
-2. Copier le **contenu** de `build/` vers `/var/www/html`, en ajoutant et en remplaçant, **sans jamais supprimer** : le serveur contient des fichiers qui ne sont pas dans le dépôt (les livrets Saynètes, dans `/assets/livrets/`).
-3. Vérifier dans un navigateur : `/`, `/blog`, `/cc-sudoku/`, `/cc-sudoku/assistance/`, `/cc-sudoku/confidentialite/`, `/mentions-legales/`.
+Depuis le Mac, dans ce dossier :
+
+```bash
+npm run deploy:test   # simulation : montre ce qui partirait, n'envoie rien
+npm run deploy        # construit le site et l'envoie dans /var/www/html
+```
+
+`scripts/envoyer.sh` construit le site dans **`build/`**, puis le copie par SFTP avec lftp, en ajoutant et en remplaçant, **sans jamais supprimer**. Le serveur garde en effet des fichiers qui ne sont pas dans le dépôt : les livrets Saynètes dans `/assets/livrets/` et les vidéos dans `/assets/video/`. Les articles marqués `"statut": "brouillon"` dans `public/posts/index.json` sont retirés du build.
+
+Après l'envoi, vérifier dans un navigateur : `/`, `/blog`, `/cc-sudoku/`, `/cc-sudoku/assistance/`, `/cc-sudoku/confidentialite/`, `/mentions-legales/`.
 
 nginx sert d'abord un fichier ou un dossier existant (`index.html`), sinon l'application React (`try_files $uri $uri/ /index.html`). C'est ce qui permet aux pages statiques de vivre à côté de l'application.
 
