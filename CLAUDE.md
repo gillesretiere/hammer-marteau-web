@@ -18,7 +18,7 @@ Ce fichier passe le relais entre sessions. Il résume comment Gilles travaille, 
 
 ## Le dépôt
 
-- Vite + React 19 + react-router 7 + Tailwind 3. Branche de travail : `refonte/lot-b` (rien n'est encore fusionné dans `main`).
+- Vite + React 19 + react-router 7 + Tailwind 3. Branche principale : `main`. Les lots A et B y sont fusionnés par pull request (#1 le 22 novembre, #2 le 28 novembre). Branche de travail : `refonte/lot-c`, partie de `main`.
 - `npm run dev` lance le site sur le port 5173. Un proxy y fait venir les livrets et les vidéos depuis le site en ligne.
 - Contenu de l'accueil : `src/contenus/accueil.js`. Réglages du portfolio et du blog : `src/contenus/portfolio.js` et `blog.js`. Réseaux sociaux : `reseaux.js`.
 - Fiche projet avec livrets et vidéos : `public/portfolio-data/posts/<slug>.json`, affiché par `src/site/Ressources.jsx`.
@@ -53,5 +53,5 @@ Ce fichier passe le relais entre sessions. Il résume comment Gilles travaille, 
 - HM-17 : pré-rendu des pages React, pour le référencement et les aperçus de lien. À cadrer.
 - HM-30 : version anglaise. À cadrer.
 - HM-26 : recherche dans le blog, plus tard.
-- En attente de Gilles : validations (HM-2, HM-11, HM-18, HM-20, HM-28), réécriture de l'article, suppression de la branche `refactoring-claude` (HM-16).
+- En attente de Gilles : validations (HM-2, HM-11, HM-18, HM-20, HM-28), réécriture de l'article, suppression de la branche `refactoring-claude` (HM-16). Les branches `refonte/lot-a` et `refonte/lot-b`, déjà fusionnées, pourront partir en même temps.
 - La présentation de la page Blog parle encore d'« inclusion en santé numérique » : à revoir avec Gilles.
