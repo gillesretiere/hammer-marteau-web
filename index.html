@@ -1,10 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hammer-web</title>
+    <!-- Thème posé avant l'affichage, pour éviter un éclair clair en mode sombre (HM-8, voir useTheme). -->
+    <script>
+      try {
+        var c = localStorage.getItem('hammer-theme-choix');
+        if (c ? c === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+    <title>Hammer &amp; Marteau — Expression numérique</title>
+    <meta name="description" content="Hammer &amp; Marteau, micro-agence nantaise : applications, sites, livrets et vidéos." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16181C" media="(prefers-color-scheme: dark)" />
+    <!-- Aperçus de partage (HM-7) : communs à tout le site tant que les pages ne sont pas pré-rendues (HM-17). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hammer &amp; Marteau" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://hammer-marteau.com/" />
+    <meta property="og:title" content="Hammer &amp; Marteau — Expression numérique" />
+    <meta property="og:description" content="Micro-agence nantaise : applications, sites, livrets et vidéos." />
+    <meta property="og:image" content="https://hammer-marteau.com/partage/apercu.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hammer &amp; Marteau, expression numérique, micro-agence" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,100 @@
+{
+  "ressources": [
+    {
+      "titre": "Livrets",
+      "format": "livret",
+      "intro": "Chaque saynète existe en livret A5 illustré, à imprimer ou à remettre au patient, dans plusieurs langues. PDF d'environ 3 Mo.",
+      "saynetes": [
+        {
+          "titre": "Chez le médecin",
+          "sujet": "L'annonce de la maladie par le médecin traitant.",
+          "image": "/portfolio-data/images/saynetes/livret-fr.jpg",
+          "livrets": [
+            {
+              "langue": "Français",
+              "lang": "fr",
+              "titre": "Diabète – Chez le médecin",
+              "url": "/assets/livrets/SNDB-01-FR.pdf",
+              "taille": "3 Mo"
+            },
+            {
+              "langue": "Anglais",
+              "lang": "en",
+              "titre": "Diabetes – At the doctor's",
+              "url": "/assets/livrets/SNDB-01-EN.pdf",
+              "taille": "3 Mo"
+            },
+            {
+              "langue": "Espagnol",
+              "lang": "es",
+              "titre": "Diabetes – En el médico",
+              "url": "/assets/livrets/SNDB-01-ES.pdf",
+              "taille": "3 Mo"
+            },
+            {
+              "langue": "Portugais",
+              "lang": "pt",
+              "titre": "Diabetes – No médico",
+              "url": "/assets/livrets/SNDB-01-PT.pdf",
+              "taille": "3 Mo"
+            },
+            {
+              "langue": "Roumain",
+              "lang": "ro",
+              "titre": "Diabet – La doctor",
+              "url": "/assets/livrets/SNDB-01-RO.pdf",
+              "taille": "3 Mo"
+            },
+            {
+              "langue": "Russe",
+              "lang": "ru",
+              "titre": "Диабет – У врача",
+              "url": "/assets/livrets/SNDB-01-RU.pdf",
+              "taille": "3 Mo"
+            },
+            {
+              "langue": "Arabe",
+              "lang": "ar",
+              "titre": "السكري عند الطبيب",
+              "url": "/assets/livrets/SNDB-01-AR.pdf",
+              "taille": "3 Mo"
+            }
+          ]
+        },
+        {
+          "titre": "À la pharmacie",
+          "sujet": "La remise des médicaments et l'explication du traitement.",
+          "image": "/portfolio-data/images/saynetes/livret-pharmacie-pt.jpg",
+          "livrets": [
+            {
+              "langue": "Portugais",
+              "lang": "pt",
+              "titre": "Diabetes – Na farmácia",
+              "url": "/assets/livrets/SNDB-02-PT.pdf",
+              "taille": "3 Mo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "Vidéos",
+      "format": "video",
+      "elements": [
+        {
+          "titre": "Présentation de l'application",
+          "detail": "1 min 34 · Adobe Express et Premiere Pro",
+          "image": "/portfolio-data/images/saynetes/video.jpg",
+          "fichier": "/assets/video/saynetes-presentation.mp4"
+        },
+        {
+          "titre": "Clip pour les réseaux sociaux",
+          "detail": "34 s · Premiere Pro",
+          "image": "/portfolio-data/images/saynetes/clip.jpg",
+          "ratio": "1/1",
+          "fichier": "/assets/video/saynetes-clip.mp4"
+        }
+      ]
+    }
+  ]
+}

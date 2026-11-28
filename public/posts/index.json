@@ -1,5 +1,21 @@
 [
   {
+    "id": "developper-cc-sudoku-avec-ia",
+    "statut": "brouillon",
+    "title": "Développer CC Sudoku avec l'IA",
+    "date": "2026-11-23",
+    "excerpt": "Trois semaines pour passer d'un prototype à une app iPhone et iPad, avec une IA qui écrit le code et un humain qui décide.",
+    "fileName": "developper-cc-sudoku-avec-ia.md",
+    "tags": [
+      "IA",
+      "Sudoku",
+      "Développement"
+    ],
+    "readingTime": "6 min",
+    "cover": "/portfolio-data/images/cc-sudoku.jpg",
+    "coverPosition": "50% 32%"
+  },
+  {
     "id": "ecrivain-face-ia",
     "title": "L'écrivain face à l'intelligence artificielle : hérésie ou bienfait ?",
     "date": "2026-04-03",
@@ -11,19 +27,5 @@
     ],
     "readingTime": "10 min",
     "cover": ""
-  },
-  {
-    "id": "sudoku_generator_all",
-    "title": "Développer un moteur de Sudoku - 5 étapes",
-    "date": "2026-11-01",
-    "excerpt": "Refonte d'un moteur de Sudoku déterministe et pédagogique : de la théorie de Berthier-Royle à l'implémentation logicielle.",
-    "fileName": "post_on_sudoku_generator_all.md",
-    "tags": [
-      "IA",
-      "Sudoku",
-      "Développement"
-    ],
-    "readingTime": "12 min",
-    "cover": "/images/portfolio/saynetes-cover.jpg"
   }
 ]

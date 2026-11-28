@@ -1,77 +1,56 @@
-@import url('https://use.typekit.net/tjn2ftb.css');
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap');
+@import url('https://use.typekit.net/wpk6mjn.css'); /* Adobe Fonts : Articulat CF et Artifex CF seulement (HM-5) */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ── RTL (arabe) ───────────────────────────────────────── */
+/* Les titres arabes des livrets utilisent la police arabe du système (HM-15 : plus d'appel à Google Fonts). */
 :dir(rtl) {
-  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
   text-align: right;
   line-height: 1.8;
 }
-:dir(rtl) .badge-lang { margin-right: 0; margin-left: 8px; }
 
-/* ── LIGHT MODE (défaut) ────────────────────────────────── */
+/* ── COULEURS (lot B : grille et filets) ─────────────────
+   Papier, encre, filets fins et forts, un seul accent.
+   Les anciennes variables (--bg, --text-h…) pointent sur les nouvelles,
+   pour que les pages pas encore refaites prennent la même palette. */
 :root {
-  /* Fonds */
-  --bg:           #e6e2db;
-  --bg-card:      #f0eee9;
-  --surface:      #faf9f7;
-  /* Couleurs */
-  --primary:      #468faf;
-  --primary-hover:#3a7a97;
-  --accent:       #468faf;
-  --accent2:      #3c096c;
-  /* Texte */
-  --text-h:       #012a4a;
-  --text-b:       #2d2926;
-  --text-m:       #6b6360;
-  /* Bords & ombres */
-  --border:       #b8b0a8;
-  --border-dark:  #252530;
-  --card-shadow:  0 2px 8px rgba(1,42,74,.08);
-}
+  --paper:       #FAFAF8;
+  --paper-2:     #F1F1EC;
+  --ink:         #1C1C1C;
+  --ink-soft:    #5E5E58;
+  --rule:        #D6D6D0;
+  --rule-strong: #1C1C1C;
+  --accent:      #D9480F; /* Orange de CC Sudoku (HM-4), le même que les chiffres du joueur dans l'app, confirmé le 24 nov. */
 
-/* ── DARK MODE ──────────────────────────────────────────── */
+  --bg: var(--paper); --bg-card: var(--paper-2); --surface: var(--paper-2);
+  --primary: var(--accent); --primary-hover: var(--accent); --accent2: var(--ink);
+  --text-h: var(--ink); --text-b: var(--ink); --text-m: var(--ink-soft);
+  --border: var(--rule); --border-dark: var(--rule-strong);
+  --card-shadow: none;
+}
 .dark {
-  --bg:           #0d1117;
-  --bg-card:      #161b22;
-  --surface:      #1e2530;
-  --primary:      #5ba3c4;
-  --primary-hover:#7ab8d4;
-  --accent:       #5ba3c4;
-  --accent2:      #a78bfa;
-  --text-h:       #e6e2db;
-  --text-b:       #c8c0b8;
-  --text-m:       #8888a0;
-  --border:       #30363d;
-  --border-dark:  #30363d;
-  --card-shadow:  0 4px 16px rgba(0,0,0,.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:           #0d1117;
-    --bg-card:      #161b22;
-    --surface:      #1e2530;
-    --primary:      #5ba3c4;
-    --primary-hover:#7ab8d4;
-    --accent:       #5ba3c4;
-    --accent2:      #a78bfa;
-    --text-h:       #e6e2db;
-    --text-b:       #c8c0b8;
-    --text-m:       #8888a0;
-    --border:       #30363d;
-    --border-dark:  #30363d;
-    --card-shadow:  0 4px 16px rgba(0,0,0,.4);
-  }
+  --paper:       #16181C;
+  --paper-2:     #1F2227;
+  --ink:         #E8E8E3;
+  --ink-soft:    #9A9FA8;
+  --rule:        #33373E;
+  --rule-strong: #E8E8E3;
+  --accent:      #FF7A45; /* Même orange, éclairci pour le fond sombre (6,9:1) ; le thème sombre de l'app est bleu (HM-4). */
 }
 
 /* ── BASE ───────────────────────────────────────────────── */
+/* Polices (HM-5), retenues le 23 nov. : Articulat pour les titres et le texte,
+   Artifex (serif, même fonderie) pour le corps des articles du blog. */
+:root {
+  --font-titre: articulat-cf, sans-serif;
+  --font-texte: articulat-cf, sans-serif;
+  --font-article: artifex-cf, Georgia, serif;
+}
+
 body {
+  font-family: var(--font-texte);
   background-color: var(--bg);
   color: var(--text-h);
   transition: background 0.3s ease, color 0.3s ease;
@@ -86,7 +65,7 @@ body {
 }
 
 h1,h2,h3,h4 {
-  font-family: articulat-cf, sans-serif;
+  font-family: var(--font-titre);
   font-weight: 700;
   color: var(--text-h);
 }
@@ -122,3 +101,13 @@ h1,h2,h3,h4 {
 .markdown-body th { background:rgba(70,143,175,.08); color:var(--text-h); font-weight:bold; border:1px solid var(--border); padding:.75rem 1rem; text-align:left; }
 .markdown-body td { border:1px solid var(--border); padding:.75rem 1rem; }
 .markdown-body img { max-width:100%; border-radius:8px; margin:1.5rem 0; }
+
+
+/* Filets : fin entre les éléments, fort entre les sections (comme les traits de bloc d'une grille) */
+.rule-strong { border-top: 2px solid var(--rule-strong); }
+
+/* Focus clavier visible partout, dans la couleur d'accent (HM-19). La souris n'en déclenche pas. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

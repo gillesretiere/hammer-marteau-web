@@ -3,47 +3,38 @@ title: "Les Saynètes — Expression numérique et médiation en santé"
 slug: "les-saynetes"
 date: "2026-05-31"
 client: "ASAMLA (Association Santé Migrants Loire-Atlantique)"
-partenaire: "ARS (Agence Régionale de Santé), Association Montjoie"
-role: "Conception UX / Architecture Web / Développement React"
+partenaire: "ARS (Agence Régionale de Santé)"
+role: "Conception, graphisme, application web, livrets et vidéos"
 tags: ["React", "Multilinguisme", "Médiation", "Inclusion"]
 url: "https://saynetes.fr"
 ---
 
-# Les Saynètes — Plateforme multimédia interactive pour l'allophonie
+## Le contexte
 
-## Le Contexte et L'Alliance
-Dans le champ médico-social, la barrière de la langue constitue un obstacle majeur à l'accès aux soins et aux droits fondamentaux. Face à ce constat, l'**ASAMLA** mène des actions de médiation auprès des populations allophones. 
+Pour un patient diabétique, comprendre son traitement est le premier pas vers l'autonomie. Quand le patient ne parle pas français, ce premier pas bute sur la langue. En consultation, le temps manque pour expliquer, et il est difficile de vérifier ce qui a été compris. Les brochures, elles, restent illisibles pour qui ne lit pas le français.
 
-En alliance avec l'association et avec le soutien financier de l'**ARS**, **Hammer & Marteau** a proposé une solution numérique capable de prolonger l'action des médiateurs sur le terrain à travers un outil d'apprentissage et d'expression autonome.
+L'**ASAMLA** accompagne à Nantes les personnes migrantes dans leur parcours de soin. Avec le soutien de l'**ARS**, Hammer & Marteau a conçu avec elle un outil d'éducation thérapeutique qui prolonge le travail des médiateurs, en consultation comme à la maison.
 
-## Le Problème
-Les outils d'information institutionnels classiques (brochures papier, sites web textuels denses) échouent souvent auprès des publics migrants pour plusieurs raisons :
-- Illettrisme ou analphabétisme dans la langue d'origine.
-- Fracture numérique (interfaces non adaptées aux smartphones d'anciennes générations).
-- Manque d'ancrage culturel dans les situations représentées.
+## Des histoires courtes, à lire et à écouter
 
-## La Réponse : Une UX Inclusive et Scénarisée
-Le projet **"Les Saynètes"** se matérialise sous la forme d'une application web mobile-first ultra-épurée, articulée autour de scénarios du quotidien (visite chez le médecin, guichet de la sécurité sociale, pharmacie).
+Une saynète est une scène courte et illustrée de la vie du patient : l'annonce de la maladie chez le médecin traitant, la remise des médicaments à la pharmacie. Chaque histoire transmet quelques messages clés, sans surcharge.
 
-### 1. Architecture Multilingue Avancée
-- Intégration d'un système audio natif permettant d'écouter les dialogues en 7 langues (dont l'Arabe littéraire, le Russe, le Roumain et le Turc).
-- Changement de langue à la volée sans rechargement de page pour permettre une utilisation conjointe par le médiateur et l'usager.
-- Prise en charge native des typographies non-latines et des sens de lecture alternés (RTL - Right to Left) pour les langues concernées.
+Dans l'application, l'utilisateur choisit sa langue, puis une histoire. Les dialogues défilent sous forme de cartes, avec le texte et l'audio. Les mots à retenir sont surlignés et renvoient à une mini-carte explicative.
 
-### 2. Design Visuel Épuré
-Inspiré par nos lignes directrices géométriques et minimalistes, l'interface élimine le superflu :
-- **Navigation par l'image :** Utilisation d'illustrations contrastées et de pictogrammes universels pour guider l'utilisateur sans barrière textuelle.
-- **Performance éco-conçue :** Code React optimisé pour un chargement instantané, même sur les réseaux mobiles à faible bande passante (3G / zones blanches).
+Les textes sont rédigés par des professionnels de santé, puis traduits et enregistrés par des interprètes diplômés. L'application parle huit langues : français, anglais, arabe, espagnol, portugais, roumain, russe et turc.
 
-## Spécifications Techniques
+## Un outil pour la consultation
 
-```json
-{
-  "stack": ["React.js", "Tailwind CSS", "Framer Motion", "i18next"],
-  "audio_engine": "Web Audio API (compression Opus pour faible bande passante)",
-  "accessibility": "Objectif WCAG 2.1 niveau AA complété"
-}
-```
+Les Saynètes s'utilisent en trois temps :
 
-## Impact et Perspectives
-Déployée auprès des équipes terrain de l'ASAMLA, la plateforme "Les Saynètes" vise à devenir un outil de référence pour amorcer le dialogue lors des ateliers collectifs de santé. Ce projet démontre qu'en liant technique rigoureuse et humanité, le numérique peut devenir un vecteur puissant d'inclusion sociale.
+1. **En consultation**, le soignant s'appuie sur une saynète pour illustrer une explication ou une consigne de traitement.
+2. **En fin de séance**, il remet un livret A5 ou fait scanner un QR code.
+3. **À la maison**, le patient et son entourage relisent et réécoutent l'histoire dans leur langue.
+
+L'application s'ouvre dans le navigateur, sur tablette comme sur téléphone, sans installation ni création de compte.
+
+## Ce que Hammer & Marteau a réalisé
+
+- La conception de l'application et son graphisme.
+- Les livrets A5, créés sous InDesign, une saynète par livret, dans chaque langue.
+- Une vidéo de présentation et un clip pour les réseaux sociaux.

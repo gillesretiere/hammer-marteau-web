@@ -5,6 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        paper:  { DEFAULT: 'var(--paper)', 2: 'var(--paper-2)' },
+        ink:    { DEFAULT: 'var(--ink)', soft: 'var(--ink-soft)' },
+        rule:   { DEFAULT: 'var(--rule)', strong: 'var(--rule-strong)' },
+        accent: 'var(--accent)',
         brand: {
           bg:      'var(--bg)',
           card:    'var(--bg-card)',
@@ -20,7 +24,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        primary:   ['articulat-cf', 'sans-serif'],
+        primary:   ['var(--font-titre)'],
+        texte:     ['var(--font-texte)'],
         secondary: ['artifex-cf',   'serif'],
       },
       boxShadow: {
